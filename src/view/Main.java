@@ -9,6 +9,7 @@ public class Main extends PApplet {
 		
 		PApplet.main(Main.class.getName());
 	}
+	public int Schange=0;
 	InitialScreen IS;
 	
 	public void settings() {
@@ -30,7 +31,9 @@ public class Main extends PApplet {
 	}
 	
 	public void mouseClicked() {
-		
+		IS.button();
+		Schange = IS.getChange();
+		System.out.println(IS.getChange());
 	}
 	public void mouseWheel(MouseEvent event) {
 		if (event.getCount() == 1.0) {

@@ -5,6 +5,9 @@ import processing.core.PImage;
 
 public class InitialScreen extends ScreenFather{
 
+	private int change = 0;
+	private int Nchange;
+	
 	public InitialScreen(int posY,PApplet app) {
 		super (posY,app);
 		screen = app.loadImage("../resources/Landing.png");
@@ -20,6 +23,22 @@ public class InitialScreen extends ScreenFather{
 			posY+=30;
 			System.out.println(posY);
 		}
+	}
+	public void button() {
+		if (mouseX > 0 && mouseX < 1440
+				&& mouseY > 0 && mouseY < 630 ) {
+			Nchange=1;
+		}
+	}
+
+	public int getChange() {
+		return change = Nchange;
+	}
+
+	public void setChange(int change) {
+		this.change = change;
+	}
+	
 
 	}
-}
+
