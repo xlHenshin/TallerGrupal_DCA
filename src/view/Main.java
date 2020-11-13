@@ -20,6 +20,7 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		System.out.println("andres");
+		System.out.println("Cristian");
 		background(0);
 	}
 
