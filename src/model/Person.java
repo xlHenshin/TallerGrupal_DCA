@@ -1,5 +1,62 @@
 package model;
 
-public class Person {
+import processing.core.PApplet;
 
+public abstract class Person extends PApplet {
+
+	PApplet app;
+	protected String name, lastName, mail, nationality;
+	protected int cellNumber;
+	
+	public Person(String name, String lastName, String mail, String nationality, int cellNumber, PApplet app) {
+		
+		this.name = name;
+		this.lastName=lastName;
+		this.mail= mail;
+		this.nationality= nationality;
+		this.cellNumber= cellNumber;
+		this.app=app;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public String getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+
+	public int getCellNumber() {
+		return cellNumber;
+	}
+
+	public void setCellNumber(int cellNumber) {
+		this.cellNumber = cellNumber;
+	}
+	
+	
 }
