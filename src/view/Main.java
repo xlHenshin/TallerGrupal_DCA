@@ -21,5 +21,12 @@ public class Main extends PApplet {
 	public void draw() {
 		background(0);
 	}
-
+	
+	public void keyPressed() {
+		
+	}
+	
+	public void mouseClicked() {
+		
+	}
 }
