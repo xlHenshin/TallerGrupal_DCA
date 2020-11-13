@@ -1,5 +1,6 @@
 package view;
 
-public class Screen {
+import processing.core.PApplet;
 
+public class Screen extends PApplet {
 }
