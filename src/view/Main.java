@@ -42,7 +42,7 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		background(0);
-		
+		System.out.println("pruebita");
 		switch (schange) {
 		case 0:
 			initialscreen.drawImage();
