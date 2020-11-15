@@ -6,7 +6,7 @@ import processing.core.PImage;
 public class InitialScreen extends ScreenFather{
 
 	private int change = 0;
-	private int Nchange;
+	private int nchange;
 	
 	public InitialScreen(int posY,PApplet app) {
 		super (posY,app);
@@ -27,12 +27,12 @@ public class InitialScreen extends ScreenFather{
 	public void button() {
 		if (mouseX > 0 && mouseX < 1440
 				&& mouseY > 0 && mouseY < 630 ) {
-			Nchange=1;
+			nchange=1;
 		}
 	}
 
 	public int getChange() {
-		return change = Nchange;
+		return change = nchange;
 	}
 
 	public void setChange(int change) {
