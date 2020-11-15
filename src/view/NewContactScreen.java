@@ -6,7 +6,8 @@ public class NewContactScreen extends ScreenFather {
 
 	public NewContactScreen(float posY, PApplet app) {
 		super(posY, app);
-		// TODO Auto-generated constructor stub
+		screen = app.loadImage("../resources/newcontact.png");
+		
 	}
 
 }
