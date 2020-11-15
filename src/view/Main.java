@@ -25,7 +25,7 @@ public class Main extends PApplet {
 		background(0);
 		IS.drawImage();
 		System.out.println("hola");
-		System.out.println("Hola angie carepipi");
+		System.out.println("Hola angie careverga");
 	}
 	
 	public void keyPressed() {
