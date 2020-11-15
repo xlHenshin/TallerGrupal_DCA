@@ -26,13 +26,13 @@ public class InitialScreen extends ScreenFather{
 	}
 	public void button() {
 		if (mouseX > 0 && mouseX < 1440
-				&& mouseY > 0 && mouseY < 630 ) {
-			Nchange=1;
+			&& mouseY > 0 && mouseY < 630) {
+			System.out.println(mouseX);
 		}
 	}
 
 	public int getChange() {
-		return change = Nchange;
+		return change;
 	}
 
 	public void setChange(int change) {

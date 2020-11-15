@@ -24,19 +24,15 @@ public class Main extends PApplet {
 	public void draw() {
 		background(0);
 		IS.drawImage();
-		System.out.println("hola");
-		System.out.println("Hola angie careverga");
-		System.out.println("Hola cristian hpta");
 	}
 	
 	public void keyPressed() {
 		
 	}
 	
-	public void mouseClicked() {
+	public void mousePressed() {
 		IS.button();
-		Schange = IS.getChange();
-		System.out.println(IS.getChange());
+		//System.out.println(mouseY);
 	}
 	public void mouseWheel(MouseEvent event) {
 		if (event.getCount() == 1.0) {
