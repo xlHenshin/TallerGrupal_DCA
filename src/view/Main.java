@@ -129,6 +129,10 @@ public class Main extends PApplet {
 			
 		case 1:
 			
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
+			
 			if (mouseX > 825 && mouseX < 825 + 65
 					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
 				schange = 3;
@@ -156,6 +160,9 @@ public class Main extends PApplet {
 			break;
 			
 		case 2:
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
 			
 			if (mouseX > 825 && mouseX < 825 + 65
 					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
@@ -184,6 +191,10 @@ public class Main extends PApplet {
 			
 		case 3:
 			
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
+			
 			if (mouseX > 825 && mouseX < 825 + 65
 					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
 				schange = 3;
@@ -209,6 +220,10 @@ public class Main extends PApplet {
 			break;
 			
 		case 4:
+			
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
 			
 			if (mouseX > 825 && mouseX < 825 + 65
 					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
@@ -242,6 +257,10 @@ public class Main extends PApplet {
 			
 		case 5:
 			
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
+			
 			if (mouseX > 825 && mouseX < 825 + 65
 					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
 				schange = 3;
@@ -274,6 +293,10 @@ public class Main extends PApplet {
 			
 		case 6: 
 
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
+			
 			if (mouseX > 825 && mouseX < 825 + 65
 					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
 				schange = 3;
@@ -302,11 +325,18 @@ public class Main extends PApplet {
 			
 		case 7:
 
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
 			
 			break;
 			
 		case 8: 
-
+			
+			if (mouseX > 647 && mouseX < 647 + 137
+					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
+			
 			if (mouseX > 825 && mouseX < 825 + 65
 					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
 				schange = 3;
