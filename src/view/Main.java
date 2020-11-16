@@ -21,9 +21,10 @@ public class Main extends PApplet {
 	NewContactScreen newcontactscreen;
 	TotalScreen totalscreen;
 	ShoppingScreen shoppingscreen;
-	
+
 	public boolean error = false;
 	public int schange=0; //Acá se cambia pantalla
+
 	
 	
 	
