@@ -21,6 +21,7 @@ public class Main extends PApplet {
 	TotalScreen totalscreen;
 	ShoppingScreen shoppingscreen;
 	
+	public boolean error = false;
 	public int schange=0; //Acá se cambia pantalla
 	
 	
@@ -69,6 +70,10 @@ public class Main extends PApplet {
 		case 5:
 			buyscreen.drawImage();
 			buyscreen.mostrarP5();
+			error=buyscreen.isError();
+			if (error==true) {
+				buyscreen.errorMessage();
+			}
 			break;
 			
 		case 6: 
@@ -104,7 +109,6 @@ public class Main extends PApplet {
 		case 0:
 			initialscreen.button();
 			schange=initialscreen.getChange();
-			System.out.println(schange);
 			break;
 			
 		case 1:
