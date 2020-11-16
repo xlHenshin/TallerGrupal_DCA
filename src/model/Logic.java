@@ -20,6 +20,17 @@ public class Logic extends PApplet {
 		Logic.app = app;
 		userList = new ArrayList<User>();
 		contactList = new LinkedList<Contact>();
+		
+		User cristian= new User("Cristian", "Mendez", "crisdamencast@gmail.com", "12345", "Colombiano", "1234567", app);
+		userList.add(cristian);
+		
+		Contact elon= new Contact("Elon", "Musk", "espeiseks@egomusk.com", "49", "Sudafricano", "00000", app);
+		Contact amber= new Contact("Amber", "Heard", "johnnydepp@gmail.com", "34", "Estadounidense", "11111", app);
+		Contact cara= new Contact("Cara", "Delevigne", "trioespacial@gmail.com", "28", "Inglesa", "22222", app);
+		
+		contactList.add(elon);
+		contactList.add(amber);
+		contactList.add(cara);
 	}
 	
 	public static Logic getInstance() {
