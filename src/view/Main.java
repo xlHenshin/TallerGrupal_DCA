@@ -19,7 +19,7 @@ public class Main extends PApplet {
 	BuyScreen buyscreen;
 	NewContactScreen newcontactscreen;
 	TotalScreen totalscreen;
-	//ShoppingScreen shoppingscreen;
+	ShoppingScreen shoppingscreen;
 	
 	public int schange=0; //Acá se cambia pantalla
 	
@@ -39,7 +39,7 @@ public class Main extends PApplet {
 		buyscreen= new BuyScreen(0,this);
 		newcontactscreen= new NewContactScreen(0,this);
 		totalscreen= new TotalScreen(0,this);
-		//shoppingscreen= new ShoppingScreen(0,this);
+		shoppingscreen= new ShoppingScreen(0,this);
 	}
 	
 	public void draw() {
@@ -79,7 +79,7 @@ public class Main extends PApplet {
 			break;
 			
 		case 8: 
-			//shoppingscreen.drawImage();
+			shoppingscreen.drawImage();
 			break;
 			
 		default:
@@ -144,18 +144,10 @@ public class Main extends PApplet {
 			if (mouseX > 1096 && mouseX < 1096 + 82
 					&& mouseY > 48 && mouseY < 48 + 10) // Register
 				schange = 2;
-
-			if (mouseX > 543 && mouseX < 543 + 47
-					&& mouseY > 48 && mouseY < 48 + 10) // 	About Button ( por si acaso )
-				schange = 3;
 			
 			if (mouseX > 647 && mouseX < 647 + 137
 					&& mouseY > 40 && mouseY < 40 + 19) // 	InitialScreen Button 
 				schange = 0;
-			
-			if (mouseX > 256 && mouseX < 256 + 17
-					&& mouseY > 48 && mouseY < 48 + 10) // 	Option Button (por si acaso)
-				schange = 3;
 			
 			break;
 			
@@ -175,19 +167,11 @@ public class Main extends PApplet {
 			if (mouseX > 1096 && mouseX < 1096 + 82
 					&& mouseY > 48 && mouseY < 48 + 10) // Register
 				schange = 2;
-
-			if (mouseX > 543 && mouseX < 543 + 47
-					&& mouseY > 48 && mouseY < 48 + 10) // 	About Button ( por si acaso )
-				schange = 3;
 			
 			if (mouseX > 363 && mouseX < 363 + 106
 					&& mouseY > 48 && mouseY < 48 + 10) // 	InitialScreen Button 
-				schange = 3;
+				schange = 0;
 			
-			if (mouseX > 256 && mouseX < 256 + 17
-					&& mouseY > 48 && mouseY < 48 + 10) // 	Option Button (por si acaso)
-				schange = 3;
-			break;
 			
 		case 3:
 			
@@ -210,13 +194,8 @@ public class Main extends PApplet {
 			
 			if (mouseX > 363 && mouseX < 363 + 106
 					&& mouseY > 48 && mouseY < 48 + 10) // 	InitialScreen Button 
-				schange = 3;
-			
-			if (mouseX > 256 && mouseX < 256 + 17
-					&& mouseY > 48 && mouseY < 48 + 10) // 	Option Button (por si acaso)
-				schange = 3;
-			
-			
+				schange = 0;
+					
 			break;
 			
 		case 4:
@@ -237,21 +216,15 @@ public class Main extends PApplet {
 					&& mouseY > 48 && mouseY < 48 + 10) // Register
 				schange = 2;
 
-			if (mouseX > 543 && mouseX < 543 + 47
-					&& mouseY > 48 && mouseY < 48 + 10) // 	About Button ( por si acaso )
-				schange = 3;
 			
 			if (mouseX > 363 && mouseX < 363 + 106
 					&& mouseY > 48 && mouseY < 48 + 10) // 	InitialScreen Button 
-				schange = 3;
-			
-			if (mouseX > 256 && mouseX < 256 + 17
-					&& mouseY > 48 && mouseY < 48 + 10) // 	Option Button (por si acaso)
-				schange = 3;
+				schange = 0;
+	
 			
 			if (mouseX > 673 && mouseX < 673 + 101
 					&& mouseY > 586 && mouseY < 586 + 28) // 	Cancel Button
-				schange = 3; //CAMBIAR
+				schange = 0;
 			
 			break;
 			
@@ -273,21 +246,14 @@ public class Main extends PApplet {
 					&& mouseY > 48 && mouseY < 48 + 10) // Register
 				schange = 2;
 
-			if (mouseX > 543 && mouseX < 543 + 47
-					&& mouseY > 48 && mouseY < 48 + 10) // 	About Button ( por si acaso )
-				schange = 3;
 			
 			if (mouseX > 363 && mouseX < 363 + 106
 					&& mouseY > 48 && mouseY < 48 + 10) // 	InitialScreen Button 
-				schange = 3;
-			
-			if (mouseX > 256 && mouseX < 256 + 17
-					&& mouseY > 48 && mouseY < 48 + 10) // 	Option Button (por si acaso)
-				schange = 3;
+				schange = 0;
 			
 			if (mouseX > 600 && mouseX < 600 + 100
 					&& mouseY > 627 && mouseY < 627 + 28) // 	Cancel Button
-				schange = 3; //CAMBIAR
+				schange = 0;
 			
 			break;
 			
@@ -309,17 +275,10 @@ public class Main extends PApplet {
 					&& mouseY > 48 && mouseY < 48 + 10) // Register
 				schange = 2;
 
-			if (mouseX > 543 && mouseX < 543 + 47
-					&& mouseY > 48 && mouseY < 48 + 10) // 	About Button ( por si acaso )
-				schange = 3;
 			
 			if (mouseX > 363 && mouseX < 363 + 106
 					&& mouseY > 48 && mouseY < 48 + 10) // 	InitialScreen Button 
-				schange = 3;
-			
-			if (mouseX > 256 && mouseX < 256 + 17
-					&& mouseY > 48 && mouseY < 48 + 10) // 	Option Button (por si acaso)
-				schange = 3;
+				schange = 0;
 			
 			break;
 			
@@ -327,6 +286,23 @@ public class Main extends PApplet {
 
 			if (mouseX > 647 && mouseX < 647 + 137
 					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
+				schange = 0;
+			
+			if (mouseX > 825 && mouseX < 825 + 65
+					&& mouseY > 48 && mouseY < 48 + 10) // 	Contacts Button
+				schange = 3;
+			
+			if (mouseX > 975 && mouseX < 975 + 45
+					&& mouseY > 48 && mouseY < 48 + 10) // Login Button
+				schange = 1;
+			
+			if (mouseX > 1096 && mouseX < 1096 + 82
+					&& mouseY > 48 && mouseY < 48 + 10) // Register
+				schange = 2;
+
+			
+			if (mouseX > 363 && mouseX < 363 + 106
+					&& mouseY > 48 && mouseY < 48 + 10) // 	InitialScreen Button 
 				schange = 0;
 			
 			break;
@@ -349,21 +325,14 @@ public class Main extends PApplet {
 					&& mouseY > 48 && mouseY < 48 + 10) // Register
 				schange = 2;
 
-			if (mouseX > 543 && mouseX < 543 + 47
-					&& mouseY > 48 && mouseY < 48 + 10) // 	About Button ( por si acaso )
-				schange = 3;
 			
 			if (mouseX > 363 && mouseX < 363 + 106
 					&& mouseY > 48 && mouseY < 48 + 10) // 	InitialScreen Button 
-				schange = 3;
-			
-			if (mouseX > 256 && mouseX < 256 + 17
-					&& mouseY > 48 && mouseY < 48 + 10) // 	Option Button (por si acaso)
-				schange = 3;
+				schange = 0;
 			
 			if (mouseX > 1123 && mouseX < 1123 + 115
 					&& mouseY > 547 && mouseY < 547 + 31) // 	Payment Button
-				schange = 3; //CAMBIAR
+				schange = 5; //CAMBIAR
 			break;
 			
 		default:
