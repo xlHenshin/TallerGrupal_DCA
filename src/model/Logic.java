@@ -11,10 +11,21 @@ public class Logic extends PApplet {
 	private ArrayList<Person> userList;
 	private ArrayList<Package> packageList;
 	private ArrayList<Package> buyList;
+	private static PApplet app;
 	
-	public Logic(PApplet app) {
-		
+	private static Logic unicaInstance;
+	
+	private Logic(PApplet app) {
+		Logic.app = app;
 	}
+	
+	public static Logic getInstance() {
+		if(unicaInstance == null) {
+			unicaInstance = new Logic(app);
+		}
+		return unicaInstance;
+	}
+
 	
 	public void drawPackages() {
 		
