@@ -6,9 +6,9 @@ public abstract class Person extends PApplet {
 
 	PApplet app;
 	protected String name, lastName, mail, nationality;
-	protected int cellNumber;
+	protected String cellNumber;
 	
-	public Person(String name, String lastName, String mail, String nationality, int cellNumber, PApplet app) {
+	public Person(String name, String lastName, String mail, String nationality, String cellNumber, PApplet app) {
 		
 		this.name = name;
 		this.lastName=lastName;
@@ -50,11 +50,11 @@ public abstract class Person extends PApplet {
 		this.nationality = nationality;
 	}
 
-	public int getCellNumber() {
+	public String getCellNumber() {
 		return cellNumber;
 	}
 
-	public void setCellNumber(int cellNumber) {
+	public void setCellNumber(String cellNumber) {
 		this.cellNumber = cellNumber;
 	}
 	

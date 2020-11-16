@@ -21,7 +21,7 @@ public class Main extends PApplet {
 	TotalScreen totalscreen;
 	ShoppingScreen shoppingscreen;
 	
-	public int schange=5; //Acá se cambia pantalla
+	public int schange=6; //Acá se cambia pantalla
 	
 	
 	
@@ -115,6 +115,8 @@ public class Main extends PApplet {
 		case 2:
 			registerscreen.button();
 			schange=registerscreen.getChange();
+			
+			registerscreen.getUserInfo();
 			break;		
 			
 		case 3:
@@ -137,6 +139,8 @@ public class Main extends PApplet {
 		case 6: 
 			newcontactscreen.button();
 			schange=newcontactscreen.getChange();
+			
+			newcontactscreen.getContactInfo();
 			break;
 			
 		case 7:

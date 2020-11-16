@@ -28,6 +28,7 @@ public class BuyScreen extends ScreenFather{
 		input [3] = "YY";
 		input [4] = "CVV";
 
+
 		cp5.show();
 		for (int i = 0; i < input.length; i++) {
 			cp5.addTextfield(input[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
