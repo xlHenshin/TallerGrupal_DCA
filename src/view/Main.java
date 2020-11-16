@@ -131,7 +131,7 @@ public class Main extends PApplet {
         
 			buyscreen.button();
 			schange=buyscreen.getChange();
-        buyscreen.getCardInfo();
+        //buyscreen.getCardInfo();
 
 			break;
 		case 6: 
