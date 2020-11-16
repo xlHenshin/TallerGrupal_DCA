@@ -32,12 +32,14 @@ public class NewContactScreen extends ScreenFather {
 		inputs [5] = "Cellphone Number";
 
 	
+		cp5.hide();
 		
-		for (int i = 0; i < inputs.length; i++) {
-
-			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
-			.setAutoClear(true);
-		}
+		cp5.addTextfield(inputs[0]).setPosition((app.width / 2) - 100, 364).setSize(235, 35).setAutoClear(true);
+		cp5.addTextfield(inputs[1]).setPosition((app.width / 2) - -170, 364).setSize(235, 35).setAutoClear(true);
+		cp5.addTextfield(inputs[2]).setPosition((app.width / 2) - 100, 430).setSize(235, 35).setAutoClear(true);
+		cp5.addTextfield(inputs[3]).setPosition((app.width / 2) - -170, 430).setSize(235, 35).setAutoClear(true);
+		cp5.addTextfield(inputs[4]).setPosition((app.width / 2) - 100, 497).setSize(235, 35).setAutoClear(true);
+		cp5.addTextfield(inputs[5]).setPosition((app.width / 2) - -170, 497).setSize(235, 35).setAutoClear(true);
 
 	}
 
