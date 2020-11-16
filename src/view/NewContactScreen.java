@@ -35,6 +35,7 @@ public class NewContactScreen extends ScreenFather {
 	
 		cp5.hide();
 		
+
 		cp5.addTextfield(inputs[0]).setPosition((app.width / 2) - 100, 364).setSize(235, 35).setAutoClear(true);
 		cp5.addTextfield(inputs[1]).setPosition((app.width / 2) - -170, 364).setSize(235, 35).setAutoClear(true);
 		cp5.addTextfield(inputs[2]).setPosition((app.width / 2) - 100, 430).setSize(235, 35).setAutoClear(true);
