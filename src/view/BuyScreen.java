@@ -28,7 +28,7 @@ private int change=0;
 		input [3] = "YY";
 		input [4] = "CVV";
 		
-		cp5.hide();
+		cp5.show();
 		for (int i = 0; i < input.length; i++) {
 			cp5.addTextfield(input[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
 					.setAutoClear(true);
@@ -47,6 +47,7 @@ private int change=0;
 	}
 	
 	public void button() {
+		
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) // 	InitialScreen Button 
 			change = 0;
