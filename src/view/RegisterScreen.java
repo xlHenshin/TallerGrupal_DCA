@@ -54,6 +54,10 @@ public class RegisterScreen extends ScreenFather {
 			
 		}
 	
+	public void mostrarP5() {
+		cp5.show();
+	}
+	
 	public void getUserInfo() {
 		
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
@@ -82,28 +86,41 @@ public class RegisterScreen extends ScreenFather {
 
 	public void button() {
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
-				&& app.mouseY > 40 && app.mouseY < 40 + 19) // 	InitialScreen Button 
+				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 			change = 0;
-		
+			cp5.hide();
+		}
+			
 		if (app.mouseX > 825 && app.mouseX < 825 + 65
-				&& app.mouseY > 40 && app.mouseY < 40 + 19) // 	Contacts Button
+				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	Contacts Button
 			change = 3;
+			cp5.hide();
+		}
 		
 		if (app.mouseX > 975 && app.mouseX < 975 + 45
-				&& app.mouseY > 40 && app.mouseY < 40 + 19) // Login Button
+				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Login Button
 			change = 1;
+			cp5.hide();
+		}
 		
 		if (app.mouseX > 1096 && app.mouseX < 1096 + 82
-				&& app.mouseY > 40 && app.mouseY < 40 + 19) // Register
+				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Register
 			change = 2;
+			cp5.hide();
+		}
 		
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
-				&& app.mouseY > 40 && app.mouseY < 40 + 19) // 	InitialScreen Button 
+				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 			change = 0;
+			cp5.hide();
+		}
 		
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
-				&& app.mouseY > 55 && app.mouseY < 555 + 40)
-			change = 1;
+				&& app.mouseY > 55 && app.mouseY < 555 + 40) {
+			change =1 ;
+			cp5.hide();
+		}
+			
 	}
 
 	public int getChange() {

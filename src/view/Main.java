@@ -1,6 +1,5 @@
 package view;
 
-import controller.ControlContact;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
@@ -59,6 +58,7 @@ public class Main extends PApplet {
 			
 		case 2:
 			registerscreen.drawImage();
+			registerscreen.mostrarP5();
 			break;
 			
 		case 3:
