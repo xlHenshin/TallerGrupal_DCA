@@ -12,6 +12,7 @@ public class BuyScreen extends ScreenFather{
 	private String [] input;
 	private String cardholder, cardnumber, mm, yy, cvv;
 	private ControlP5 cp5;
+	private boolean resultado;
 
 	public BuyScreen(float posY, PApplet app) {
 		super(posY, app);
@@ -28,7 +29,9 @@ public class BuyScreen extends ScreenFather{
 		input [3] = "YY";
 		input [4] = "CVV";
 
+
 		cp5.hide();
+
 		for (int i = 0; i < input.length; i++) {
 			cp5.addTextfield(input[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
 			.setAutoClear(true);
@@ -65,32 +68,43 @@ public class BuyScreen extends ScreenFather{
 			change = 2;
 
 		if (app.mouseX > 719 && app.mouseX < 719 + 121
-				&& app.mouseY > 626 && app.mouseY < 626 + 28) {// 	continue Button
+				&& app.mouseY > 626 && app.mouseY < 626 + 28) {
+			// 	continue Button
+			cardholder = cp5.get(Textfield.class, "Cardholder Name").getText();
+			cardnumber = cp5.get(Textfield.class, "Card Number").getText();
+			mm = cp5.get(Textfield.class, "MM").getText();
+			yy = cp5.get(Textfield.class, "YY").getText();
+			cvv = cp5.get(Textfield.class, "CVV").getText();
+			
 			for (int i = 0; i < input.length; i++) {
-				if (isNumeric(input[0]) && isNumeric(input[1]) && isNumeric(input[2]) &&
-						isNumeric(input[3]) && isNumeric(input[4])) {
-					String tempArray = input[0];
-					for (int j = 0; j < tempArray.length(); j++) {
-					if (tempArray.charAt(j) < 16) {
-						cardholder = input[0];
+				if (isString(cardholder) && isNumeric(cardnumber) && isNumeric(mm) &&
+						isNumeric(yy)  && isNumeric(cvv)) {
+					if (cardnumber.length() > 14 && cardnumber.length()<16) {
 						cardnumber = input[1];
+					}
+					if (mm.length() > 0 && mm.length()<2 && yy.length() > 2 && yy.length()<4
+							&& mm.length() > 1 && mm.length()<3) {
 						mm=input[2];
 						yy=input[3];
 						cvv=input[4];
+					}
+						cardholder = input[0];				
 						change = 4;
 						cp5.hide();	
 					}
+				else {
+					app.fill(0);
+					app.text("revise los datos registrados, recuerde que los nombres no llevan numeros", 640, 100);
+					app.text("los datos numericos no llevan letras y las tarjetas presentan 16 digitos, los meses 2 digitos y los a�os 4 digitos", 640, 120);
+				}
 					}
 				}
-			}
-		}
+			
 		if (app.mouseX > 600 && app.mouseX < 600 + 100
 				&& app.mouseY > 626 && app.mouseY < 626 + 28) // 	cancel Button 
 			change = 0;
 	}
 	public boolean isNumeric(String cadena) {
-
-		boolean resultado;
 
 		try {// se controla una posible excepcion
 			Integer.parseInt(cadena);// si se logra guardar correctamente es un numero
@@ -104,7 +118,6 @@ public class BuyScreen extends ScreenFather{
 	}
 	public boolean isString(String cadena) {
 
-		boolean resultado;
 
 		try {// se controla una posible excepcion
 			Integer.parseInt(cadena);// si se logra guardar correctamente es un numero
@@ -123,6 +136,10 @@ public class BuyScreen extends ScreenFather{
 
 	public void setChange(int change) {
 		this.change = change;
+	}
+	
+	public void mostrarP5() {
+		cp5.show();
 	}
 
 }
