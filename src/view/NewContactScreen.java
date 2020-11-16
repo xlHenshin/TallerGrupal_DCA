@@ -23,7 +23,6 @@ public class NewContactScreen extends ScreenFather {
 		controlnewcontact = new ControlNewContact();
 		cp5 = new ControlP5(app);
 		inputs = new String [6];
-		cp5.hide();
 
 		inputs [0] = "First Name";
 		inputs [1] = "Last Name";
@@ -36,12 +35,23 @@ public class NewContactScreen extends ScreenFather {
 		cp5.hide();
 		
 
-		cp5.addTextfield(inputs[0]).setPosition((app.width / 2) - 100, 364).setSize(235, 35).setAutoClear(true);
-		cp5.addTextfield(inputs[1]).setPosition((app.width / 2) - -170, 364).setSize(235, 35).setAutoClear(true);
-		cp5.addTextfield(inputs[2]).setPosition((app.width / 2) - 100, 430).setSize(235, 35).setAutoClear(true);
-		cp5.addTextfield(inputs[3]).setPosition((app.width / 2) - -170, 430).setSize(235, 35).setAutoClear(true);
-		cp5.addTextfield(inputs[4]).setPosition((app.width / 2) - 100, 497).setSize(235, 35).setAutoClear(true);
-		cp5.addTextfield(inputs[5]).setPosition((app.width / 2) - -170, 497).setSize(235, 35).setAutoClear(true);
+		cp5.addTextfield(inputs[0]).setPosition((app.width / 2) - 100, 364).setSize(235, 35).setAutoClear(true)
+		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
+		
+		cp5.addTextfield(inputs[1]).setPosition((app.width / 2) - -170, 364).setSize(235, 35).setAutoClear(true)
+		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
+		
+		cp5.addTextfield(inputs[2]).setPosition((app.width / 2) - 100, 430).setSize(235, 35).setAutoClear(true)
+		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
+		
+		cp5.addTextfield(inputs[3]).setPosition((app.width / 2) - -170, 430).setSize(235, 35).setAutoClear(true)
+		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
+		
+		cp5.addTextfield(inputs[4]).setPosition((app.width / 2) - 100, 497).setSize(235, 35).setAutoClear(true)
+		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
+		
+		cp5.addTextfield(inputs[5]).setPosition((app.width / 2) - -170, 497).setSize(235, 35).setAutoClear(true)
+		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 
 	}
 
@@ -70,6 +80,10 @@ public class NewContactScreen extends ScreenFather {
 			cp5.get(Textfield.class, "Cellphone Number").setText("");
 		}
 	}
+	
+	public void mostrarP5() {
+		cp5.show();
+	}
 
 public void button () {
 	
@@ -77,27 +91,31 @@ public void button () {
 	if (app.mouseX > 647 && app.mouseX < 647 + 137
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 		change = 0;
+		cp5.hide();
 	}
 	if (app.mouseX > 825 && app.mouseX < 825 + 65
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	Contacts Button
 		change = 3;
+		cp5.hide();
 	}
 	if (app.mouseX > 975 && app.mouseX < 975 + 45
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Login Button
 		change = 1;
+		cp5.hide();
 	}
 	if (app.mouseX > 1096 && app.mouseX < 1096 + 82
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Register
 		change = 2;
-	}
-	if (app.mouseX > 941 && app.mouseX < 941 + 192
-			&& app.mouseY > 556 && app.mouseY < 556 + 42) { // create contact
-		change = 3;
+		cp5.hide();
 	}
 	
 	if (app.mouseX > 940 && app.mouseX < 940 + 190
-			&& app.mouseY > 55 && app.mouseY < 555 + 40)
+			&& app.mouseY > 55 && app.mouseY < 555 + 40) {	// create contact
 		change=3;
+		cp5.hide();
+	}
+		
+	
 }
 
 

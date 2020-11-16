@@ -1,5 +1,6 @@
 package view;
 
+import controller.ControlContact;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
@@ -41,6 +42,7 @@ public class Main extends PApplet {
 		newcontactscreen= new NewContactScreen(0,this);
 		totalscreen= new TotalScreen(0,this);
 		shoppingscreen= new ShoppingScreen(0,this);
+		
 	}
 	
 	public void draw() {
@@ -61,6 +63,13 @@ public class Main extends PApplet {
 			
 		case 3:
 			contactscreen.drawImage();
+			
+			for (int i = 0; i < contactscreen.contactList().size(); i++) {
+
+				textSize(13);
+				fill(0);
+				contactscreen.contactList().get(i).drawData(660, 410+(20*i), this);
+			}
 			break;
 			
 		case 4:
@@ -78,6 +87,7 @@ public class Main extends PApplet {
 			
 		case 6: 
 			newcontactscreen.drawImage();
+			newcontactscreen.mostrarP5();
 			break;
 			
 		case 7:
