@@ -2,6 +2,7 @@ package view;
 
 import processing.core.PApplet;
 
+
 public class NewContactScreen extends ScreenFather {
 private int change;
 	public NewContactScreen(float posY, PApplet app) {
