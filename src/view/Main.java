@@ -97,7 +97,7 @@ public class Main extends PApplet {
 		System.out.println("X= "+ mouseX);
 		System.out.println("Y= "+ mouseY);
 		
-		buyscreen.getCardInfo();
+		
 		
 		switch (schange) {
 		case 0:
@@ -231,6 +231,8 @@ public class Main extends PApplet {
 			break;
 			
 		case 5:
+			
+			buyscreen.getCardInfo();
 			
 			if (mouseX > 647 && mouseX < 647 + 137
 					&& mouseY > 37 && mouseY < 37 + 19) // 	InitialScreen Button 
