@@ -23,6 +23,7 @@ public class NewContactScreen extends ScreenFather {
 		controlnewcontact = new ControlNewContact();
 		cp5 = new ControlP5(app);
 		inputs = new String [6];
+		cp5.hide();
 
 		inputs [0] = "First Name";
 		inputs [1] = "Last Name";

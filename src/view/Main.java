@@ -68,6 +68,7 @@ public class Main extends PApplet {
 			
 		case 5:
 			buyscreen.drawImage();
+			buyscreen.mostrarP5();
 			break;
 			
 		case 6: 
