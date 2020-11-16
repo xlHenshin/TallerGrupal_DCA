@@ -32,6 +32,8 @@ public class RegisterScreen extends ScreenFather {
 		inputs [4] = "Nacionality";
 		inputs [5] = "Cellphone Number";
 		
+		cp5.hide();
+		
 		for (int i = 0; i < inputs.length; i++) {
 
 			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)

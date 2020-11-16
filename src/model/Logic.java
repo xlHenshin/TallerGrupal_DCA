@@ -7,7 +7,7 @@ import processing.core.PApplet;
 
 public class Logic extends PApplet {
 
-	private LinkedList<Person> contactList;
+	private LinkedList<Contact> contactList;
 	private ArrayList<User> userList;
 	private ArrayList<Package> packageList;
 	private ArrayList<Package> buyList;
@@ -19,6 +19,7 @@ public class Logic extends PApplet {
 	private Logic(PApplet app) {
 		Logic.app = app;
 		userList = new ArrayList<User>();
+		contactList = new LinkedList<Contact>();
 	}
 	
 	public static Logic getInstance() {
@@ -60,19 +61,34 @@ public class Logic extends PApplet {
 	}
 	
 	
-	public void newContactForm(String firstName, String email, String nacionality, String lastName, String age, String cellphoneNumber) {
+	public void newContactForm(String firstName, String lastName, String email, String age, String nationality,
+			String cellphoneNumber) {
 		
+		Contact newContact = new Contact(firstName, lastName, email, age, nationality, cellphoneNumber, app);
+		contactList.add(newContact);
+		
+		for(int i = 0; i<contactList.size();i++) {
+			
+			System.out.println(">>>>>>>>><<<<<<<<<<");
+			System.out.println(contactList.get(i).getName());
+			System.out.println(contactList.get(i).getLastName());
+			System.out.println(contactList.get(i).getMail());
+			System.out.println(contactList.get(i).getAge());
+			System.out.println(contactList.get(i).getNationality());
+			System.out.println(contactList.get(i).getCellNumber());
+			System.out.println(">>>>>>>>><<<<<<<<<<");
+		}
 	}
 	
 	public void writeArray() {
 		
 	}
 
-	public LinkedList<Person> getContactList() {
+	public LinkedList<Contact> getContactList() {
 		return contactList;
 	}
 
-	public void setContactList(LinkedList<Person> contactList) {
+	public void setContactList(LinkedList<Contact> contactList) {
 		this.contactList = contactList;
 	}
 

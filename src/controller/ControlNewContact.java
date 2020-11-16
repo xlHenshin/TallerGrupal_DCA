@@ -10,11 +10,11 @@ public class ControlNewContact {
 		
 		logic = Logic.getInstance();
 	}
-	
-	
-	public void getUserInfo(String firstName, String email, String nacionality, String lastName, String age, String cellphoneNumber) {
+
+	public void getContactInfo(String firstName, String lastName, String email, String age, String nationality,
+			String cellphoneNumber) {
 		
-		logic.newContactForm(firstName, email, nacionality, lastName, age, cellphoneNumber);
+		logic.newContactForm(firstName, lastName, email, age, nationality, cellphoneNumber);
 	}
 
 }

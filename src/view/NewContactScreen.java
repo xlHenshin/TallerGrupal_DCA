@@ -2,17 +2,16 @@ package view;
 
 import controlP5.ControlP5;
 import controlP5.Textfield;
-import controller.ControlBuy;
 import controller.ControlNewContact;
 import processing.core.PApplet;
 
 
 public class NewContactScreen extends ScreenFather {
 
-	private int change;
+	private int change = 6;
 	private ControlNewContact controlnewcontact;
 	private String[] inputs;
-	private String firstName, email, nacionality, lastName, age, cellphoneNumber;
+	private String firstName, email, nationality, lastName, age, cellphoneNumber;
 	private PApplet app;
 	private ControlP5 cp5;
 
@@ -26,13 +25,13 @@ public class NewContactScreen extends ScreenFather {
 		inputs = new String [6];
 
 		inputs [0] = "First Name";
-		inputs [1] = "Email";
-		inputs [2] = "Nacionality";
-		inputs [3] = "Last Name";
-		inputs [4] = "Age";
+		inputs [1] = "Last Name";
+		inputs [2] = "Email";
+		inputs [3] = "Age";
+		inputs [4] = "Nationality";
 		inputs [5] = "Cellphone Number";
 
-		cp5.hide();
+	
 		
 		for (int i = 0; i < inputs.length; i++) {
 
@@ -42,28 +41,29 @@ public class NewContactScreen extends ScreenFather {
 
 	}
 
-	public void getUserInfo() {
+	public void getContactInfo() {
 
-		if (app.mouseX > 720 && app.mouseX < 720 + 122
-				&& app.mouseY > 625 && app.mouseY < 625 + 27) {
+		if (app.mouseX > 940 && app.mouseX < 940 + 190
+				&& app.mouseY > 55 && app.mouseY < 555 + 40) {
 			System.out.println("Click on btn");
 			
 			cp5.hide();
 
 			firstName = cp5.get(Textfield.class, "First Name").getText();
-			email = cp5.get(Textfield.class, "Email").getText();
-			nacionality = cp5.get(Textfield.class, "Nacionality").getText();
 			lastName = cp5.get(Textfield.class, "Last Name").getText();
+			email = cp5.get(Textfield.class, "Email").getText();
 			age = cp5.get(Textfield.class, "Age").getText();
+			nationality = cp5.get(Textfield.class, "Nationality").getText();
 			cellphoneNumber = cp5.get(Textfield.class, "Cellphone Number").getText();
 
-			//controlnewcontact.getUserInfo(firstName, email, nacionality, lastName, age, cellphoneNumber);
+			controlnewcontact.getContactInfo(firstName,lastName, email,age, nationality, cellphoneNumber);
 
-			cp5.get(Textfield.class, "Carholder Name").setText("");
-			cp5.get(Textfield.class, "Card Number").setText("");
-			cp5.get(Textfield.class, "MM").setText("");
-			cp5.get(Textfield.class, "YY").setText("");
-			cp5.get(Textfield.class, "CVV").setText("");
+			cp5.get(Textfield.class, "First Name").setText("");
+			cp5.get(Textfield.class, "Last Name").setText("");
+			cp5.get(Textfield.class, "Email").setText("");
+			cp5.get(Textfield.class, "Age").setText("");
+			cp5.get(Textfield.class, "Nationality").setText("");
+			cp5.get(Textfield.class, "Cellphone Number").setText("");
 		}
 	}
 
@@ -88,6 +88,10 @@ public void button () {
 			&& app.mouseY > 556 && app.mouseY < 556 + 42) { // create contact
 		change = 3;
 	}
+	
+	if (app.mouseX > 940 && app.mouseX < 940 + 190
+			&& app.mouseY > 55 && app.mouseY < 555 + 40)
+		change=3;
 }
 public int getChange() {
 	return change;
