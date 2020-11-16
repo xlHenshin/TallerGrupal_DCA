@@ -70,6 +70,8 @@ public class NewContactScreen extends ScreenFather {
 	}
 
 public void button () {
+	
+	
 	if (app.mouseX > 647 && app.mouseX < 647 + 137
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 		change = 0;
@@ -95,6 +97,8 @@ public void button () {
 			&& app.mouseY > 55 && app.mouseY < 555 + 40)
 		change=3;
 }
+
+
 public int getChange() {
 	return change;
 }
