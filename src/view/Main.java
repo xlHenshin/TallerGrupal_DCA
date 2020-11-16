@@ -21,7 +21,7 @@ public class Main extends PApplet {
 	TotalScreen totalscreen;
 	ShoppingScreen shoppingscreen;
 	
-	public int schange=0; //Acá se cambia pantalla
+	public int schange=5; //Acá se cambia pantalla
 	
 	
 	
