@@ -16,9 +16,8 @@ private int change=0;
 	public BuyScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/payment.png");
-    this.app=app;
-	}
-	
+		this.app=app;
+
 		controlbuy = new ControlBuy();
 		cp5 = new ControlP5(app);
 		input = new String [5];
