@@ -13,6 +13,8 @@ public class BuyScreen extends ScreenFather{
 	private String cardholder, cardnumber, mm, yy, cvv;
 	private ControlP5 cp5;
 	private boolean resultado;
+	private boolean error=false;
+	private boolean errorLength = false;
 
 	public BuyScreen(float posY, PApplet app) {
 		super(posY, app);
@@ -34,7 +36,7 @@ public class BuyScreen extends ScreenFather{
 
 		for (int i = 0; i < input.length; i++) {
 			cp5.addTextfield(input[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
-			.setAutoClear(true);
+			.setAutoClear(true).setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 		}	
 	}
 
@@ -50,7 +52,7 @@ public class BuyScreen extends ScreenFather{
 	}*/
 
 	public void button() {
-		
+
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) // 	InitialScreen Button 
 			change = 0;
@@ -75,35 +77,49 @@ public class BuyScreen extends ScreenFather{
 			mm = cp5.get(Textfield.class, "MM").getText();
 			yy = cp5.get(Textfield.class, "YY").getText();
 			cvv = cp5.get(Textfield.class, "CVV").getText();
-			
+			System.out.println(cardnumber.length());
 			for (int i = 0; i < input.length; i++) {
 				if (isString(cardholder) && isNumeric(cardnumber) && isNumeric(mm) &&
 						isNumeric(yy)  && isNumeric(cvv)) {
-					if (cardnumber.length() > 14 && cardnumber.length()<16) {
-						cardnumber = input[1];
-					}
-					if (mm.length() > 0 && mm.length()<2 && yy.length() > 2 && yy.length()<4
+					if (cardnumber.length() > 14 && cardnumber.length()< 16 && mm.length() > 0 && mm.length()<2 && yy.length() > 2 && yy.length()<4
 							&& mm.length() > 1 && mm.length()<3) {
+						cardnumber = input[1];
 						mm=input[2];
 						yy=input[3];
 						cvv=input[4];
-					}
 						cardholder = input[0];				
 						change = 4;
-						cp5.hide();	
+						cp5.hide();
+						error = false;
 					}
+					else {
+						errorLength = true;
+						error = true;
+					}	
+				}
 				else {
-					app.fill(0);
-					app.text("revise los datos registrados, recuerde que los nombres no llevan numeros", 640, 100);
-					app.text("los datos numericos no llevan letras y las tarjetas presentan 16 digitos, los meses 2 digitos y los aï¿½os 4 digitos", 640, 120);
+					error = true;
 				}
-					}
-				}
-			
+			}
+		}
+
 		if (app.mouseX > 600 && app.mouseX < 600 + 100
 				&& app.mouseY > 626 && app.mouseY < 626 + 28) // 	cancel Button 
 			change = 0;
 	}
+
+	public void errorMessage () {
+		isString(cardholder);
+		isNumeric(cardnumber); 
+		isNumeric(mm);
+		isNumeric(yy); 
+		isNumeric(cvv);
+		if (errorLength=true) {
+			app.fill(0);
+			app.text("las tarjetas deben presentan 16 digitos, los meses 2 digitos, los años 4 digitos y los CVV 3 digitos", 640, 120);
+		}
+	}
+
 	public boolean isNumeric(String cadena) {
 
 		try {// se controla una posible excepcion
@@ -137,7 +153,16 @@ public class BuyScreen extends ScreenFather{
 	public void setChange(int change) {
 		this.change = change;
 	}
-	
+
+
+	public boolean isError() {
+		return error;
+	}
+
+	public void setError(boolean error) {
+		this.error = error;
+	}
+
 	public void mostrarP5() {
 		cp5.show();
 	}
