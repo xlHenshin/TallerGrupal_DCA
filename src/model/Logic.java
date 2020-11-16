@@ -8,15 +8,17 @@ import processing.core.PApplet;
 public class Logic extends PApplet {
 
 	private LinkedList<Person> contactList;
-	private ArrayList<Person> userList;
+	private ArrayList<User> userList;
 	private ArrayList<Package> packageList;
 	private ArrayList<Package> buyList;
+	
 	private static PApplet app;
 	
 	private static Logic unicaInstance;
 	
 	private Logic(PApplet app) {
 		Logic.app = app;
+		userList = new ArrayList<User>();
 	}
 	
 	public static Logic getInstance() {
@@ -39,8 +41,22 @@ public class Logic extends PApplet {
 		
 	}
 	
-	public void newUserForm() {
+	public void newUserForm(String firstName, String lastName, String email, String password, String nationality,
+			String cellphoneNumber) {
+		User newUser = new User(firstName, lastName, email, password, nationality, cellphoneNumber, app);
+		userList.add(newUser);
 		
+		for(int i = 0; i<userList.size();i++) {
+			
+			System.out.println(">>>>>>>>><<<<<<<<<<");
+			System.out.println(userList.get(i).getName());
+			System.out.println(userList.get(i).getLastName());
+			System.out.println(userList.get(i).getPassword());
+			System.out.println(userList.get(i).getMail());
+			System.out.println(userList.get(i).getNationality());
+			System.out.println(userList.get(i).getCellNumber());
+			System.out.println(">>>>>>>>><<<<<<<<<<");
+		}
 	}
 	
 	
@@ -60,11 +76,11 @@ public class Logic extends PApplet {
 		this.contactList = contactList;
 	}
 
-	public ArrayList<Person> getUserList() {
+	public ArrayList<User> getUserList() {
 		return userList;
 	}
 
-	public void setUserList(ArrayList<Person> userList) {
+	public void setUserList(ArrayList<User> userList) {
 		this.userList = userList;
 	}
 

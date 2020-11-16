@@ -9,7 +9,7 @@ import processing.core.PApplet;
 
 public class NewContactScreen extends ScreenFather {
 
-  private int change;
+	private int change;
 	private ControlNewContact controlnewcontact;
 	private String[] inputs;
 	private String firstName, email, nacionality, lastName, age, cellphoneNumber;
@@ -32,7 +32,7 @@ public class NewContactScreen extends ScreenFather {
 		inputs [4] = "Age";
 		inputs [5] = "Cellphone Number";
 
-		cp5.show();
+		cp5.hide();
 		
 		for (int i = 0; i < inputs.length; i++) {
 

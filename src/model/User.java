@@ -4,10 +4,21 @@ import processing.core.PApplet;
 
 public class User extends Person{
 
-	public User(String name, String lastName, String mail, String nationality, int cellNumber, PApplet app) {
+	private String password;
+
+	public User(String name, String lastName, String mail, String password, String nationality, String cellNumber, PApplet app) {
 		super(name, lastName, mail, nationality, cellNumber, app);
 		this.app=app;
+		this.password=password;
 	}
 
+	public String getPassword() {
+		return password;
+	}
 
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	
 }
