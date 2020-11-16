@@ -232,6 +232,8 @@ public class Main extends PApplet {
 			
 		case 5:
 			
+			buyscreen.button();
+			schange=buyscreen.getChange();
 			buyscreen.getCardInfo();
 			
 			if (mouseX > 647 && mouseX < 647 + 137
