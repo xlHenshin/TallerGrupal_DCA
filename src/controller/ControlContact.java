@@ -22,4 +22,8 @@ public class ControlContact {
 		
 	}
 	
+	public void sortName() {
+		logic.sortName();
+	}
+	
 }

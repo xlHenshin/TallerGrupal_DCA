@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 
 import processing.core.PApplet;
@@ -52,6 +53,13 @@ public class Logic extends PApplet {
 	public void logic() {
 		
 	}
+	
+	public void sortName() {
+		
+		Collections.sort(contactList);
+	}
+	
+	
 	
 	public void newUserForm(String firstName, String lastName, String email, String password, String nationality,
 			String cellphoneNumber) {

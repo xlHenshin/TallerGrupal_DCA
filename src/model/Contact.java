@@ -2,7 +2,7 @@ package model;
 
 import processing.core.PApplet;
 
-public class Contact extends Person{
+public class Contact extends Person implements Comparable<Contact> {
 
 	private String age;
 	private PApplet app;
@@ -34,5 +34,10 @@ public class Contact extends Person{
 		this.age = age;
 	}
 
+	@Override
+	public int compareTo(Contact o1) {
+		
+		return this.name.compareTo(o1.name);
+	}
 	
 }

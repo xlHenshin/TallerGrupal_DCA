@@ -138,6 +138,7 @@ public class Main extends PApplet {
 		case 3:
 			contactscreen.button();
 			schange=contactscreen.getChange();
+			contactscreen.sortList();
 			break;
 			
 		case 4:
