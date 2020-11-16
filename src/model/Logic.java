@@ -43,10 +43,6 @@ public class Logic extends PApplet {
 		
 	}
 	
-	public void buyCreditForm(String cardholder, String cardnumber, String mm, String yy, String cvv) {
-		
-		
-	}
 	
 	public void newContactForm(String firstName, String email, String nacionality, String lastName, String age, String cellphoneNumber) {
 		
