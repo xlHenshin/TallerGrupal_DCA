@@ -32,6 +32,8 @@ public class NewContactScreen extends ScreenFather {
 		inputs [4] = "Age";
 		inputs [5] = "Cellphone Number";
 
+		cp5.show();
+		
 		for (int i = 0; i < inputs.length; i++) {
 
 			cp5.addTextfield(inputs[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
@@ -45,6 +47,8 @@ public class NewContactScreen extends ScreenFather {
 		if (app.mouseX > 720 && app.mouseX < 720 + 122
 				&& app.mouseY > 625 && app.mouseY < 625 + 27) {
 			System.out.println("Click on btn");
+			
+			cp5.hide();
 
 			firstName = cp5.get(Textfield.class, "First Name").getText();
 			email = cp5.get(Textfield.class, "Email").getText();
@@ -53,7 +57,7 @@ public class NewContactScreen extends ScreenFather {
 			age = cp5.get(Textfield.class, "Age").getText();
 			cellphoneNumber = cp5.get(Textfield.class, "Cellphone Number").getText();
 
-			controlnewcontact.getUserInfo(firstName, email, nacionality, lastName, age, cellphoneNumber);
+			//controlnewcontact.getUserInfo(firstName, email, nacionality, lastName, age, cellphoneNumber);
 
 			cp5.get(Textfield.class, "Carholder Name").setText("");
 			cp5.get(Textfield.class, "Card Number").setText("");
@@ -61,7 +65,7 @@ public class NewContactScreen extends ScreenFather {
 			cp5.get(Textfield.class, "YY").setText("");
 			cp5.get(Textfield.class, "CVV").setText("");
 		}
-
+	}
 
 public void button () {
 	if (app.mouseX > 647 && app.mouseX < 647 + 137
