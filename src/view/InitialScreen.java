@@ -10,7 +10,7 @@ public class InitialScreen extends ScreenFather{
 	
 	public InitialScreen(int posY,PApplet app) {
 		super (posY,app);
-		screen = app.loadImage("../resources/Landing.png");
+		screen = app.loadImage("../resources/Initial.png");
 	}
 
 	public void scrollingPlus() {
