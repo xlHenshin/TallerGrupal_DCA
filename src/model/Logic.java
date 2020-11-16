@@ -43,7 +43,8 @@ public class Logic extends PApplet {
 		
 	}
 	
-	public void buyCreditForm() {
+	public void buyCreditForm(String cardholder, String cardnumber, String mm, String yy, String cvv) {
+		
 		
 	}
 	
@@ -86,6 +87,8 @@ public class Logic extends PApplet {
 	public void setBuyList(ArrayList<Package> buyList) {
 		this.buyList = buyList;
 	}
+
+	
 	
 	
 }

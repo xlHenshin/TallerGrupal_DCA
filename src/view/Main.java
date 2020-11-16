@@ -21,7 +21,7 @@ public class Main extends PApplet {
 	TotalScreen totalscreen;
 	ShoppingScreen shoppingscreen;
 	
-	public int schange=0; //Acá se cambia pantalla
+	public int schange=5; //Acá se cambia pantalla
 	
 	
 	
@@ -96,6 +96,8 @@ public class Main extends PApplet {
 		
 		System.out.println("X= "+ mouseX);
 		System.out.println("Y= "+ mouseY);
+		
+		buyscreen.getCardInfo();
 		
 		switch (schange) {
 		case 0:
