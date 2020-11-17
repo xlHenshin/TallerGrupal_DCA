@@ -52,6 +52,7 @@ public class RegisterScreen extends ScreenFather {
 		cp5.addTextfield(inputs[5]).setPosition((app.width / 2) - -170, 497).setSize(235, 35).setAutoClear(true)
 		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 			
+		
 		}
 	
 	public void mostrarP5() {
@@ -62,7 +63,7 @@ public class RegisterScreen extends ScreenFather {
 		
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
 				&& app.mouseY > 555 && app.mouseY < 555 + 40) {
-			System.out.println("presionado get RS");
+			System.out.println("presionado register");
 			
 			cp5.hide();
 
@@ -85,6 +86,7 @@ public class RegisterScreen extends ScreenFather {
 	}
 
 	public void button() {
+		System.out.println("change is "+change);
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 			System.out.println("presionado landing RS");

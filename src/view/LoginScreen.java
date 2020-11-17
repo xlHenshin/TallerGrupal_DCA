@@ -1,6 +1,7 @@
 package view;
 
 import controlP5.ControlP5;
+import controlP5.Textfield;
 import controller.ControlLogin;
 import processing.core.PApplet;
 
@@ -13,6 +14,7 @@ public class LoginScreen extends ScreenFather{
 	private String email, password;
 	private PApplet app;
 	private ControlP5 cp5;
+	private boolean error=false;
 	
 	public LoginScreen(float posY, PApplet app) {
 		super(posY, app);
@@ -41,6 +43,7 @@ public class LoginScreen extends ScreenFather{
 	}
 	
 	public void button() {
+		System.out.println("presionado login");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 			change = 0;
@@ -63,9 +66,23 @@ public class LoginScreen extends ScreenFather{
 		}
 		if (app.mouseX > 1048 && app.mouseX < 1048 + 128
 				&& app.mouseY > 534 && app.mouseY < 534 + 50) { // 	InitialScreen Button 
-			change = 0;
-			cp5.hide();
+			email = cp5.get(Textfield.class, "Email").getText();
+			password = cp5.get(Textfield.class, "Password").getText();
+			for (int i = 0; i < controllogin.getUserList().size(); i++) {
+				if (controllogin.getUserList().get(i).getMail().equals(email) && controllogin.getUserList().get(i).getPassword().equals(password)) {
+					change = 0;
+					cp5.hide();
+				}
+				else {
+					error=true;
+				}	
+			}
 		}
+	}
+	
+	public void errorMessage () {
+			app.fill(0);
+			app.text("el usuario esta mal escrito o no existe en nuestra base de datos", 640, 120);
 	}
 
 	public int getChange() {
@@ -74,6 +91,14 @@ public class LoginScreen extends ScreenFather{
 
 	public void setChange(int change) {
 		this.change = change;
+	}
+
+	public boolean isError() {
+		return error;
+	}
+
+	public void setError(boolean error) {
+		this.error = error;
 	}
 
 }

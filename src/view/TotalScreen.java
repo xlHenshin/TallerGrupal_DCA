@@ -10,6 +10,7 @@ private int change=7;
 		screen = app.loadImage("../resources/succesful.png");
 	}
 	public void button() {
+		System.out.println("presionado total");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 			change = 0;
