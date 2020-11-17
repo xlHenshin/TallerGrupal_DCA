@@ -5,6 +5,14 @@ import controlP5.Textfield;
 import controller.ControlLogin;
 import processing.core.PApplet;
 
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla de Login 
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
+
 public class LoginScreen extends ScreenFather{
 
 	private int change=1;
@@ -17,6 +25,10 @@ public class LoginScreen extends ScreenFather{
 	private int loginYes=1;
 	private boolean error=false;
 	
+	/**Constructor
+	 * @param posY
+	 * @param app
+	 */
 	public LoginScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/login.png");
