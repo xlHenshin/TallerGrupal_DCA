@@ -1,5 +1,7 @@
 package model;
 
+import processing.core.PApplet;
+
 public class Package {
 
 	private String description, name, duration;
@@ -13,6 +15,13 @@ public class Package {
 		this.cost=cost;
 	}
 
+	public void drawData(int x, int y, PApplet app) {
+
+		//System.out.println(name+lastName+mail+age+nationality+cellNumber);
+		app.fill(0);
+		app.text(name, x, y);
+		app.text(cost, x+ 20*4, y );
+	}
 	public String getDescription() {
 		return description;
 	}

@@ -1,6 +1,9 @@
 package controller;
 
+import java.util.ArrayList;
+
 import model.Logic;
+import model.Package;
 
 public class ControlBuy {
 
@@ -10,5 +13,7 @@ public class ControlBuy {
 		
 		logic = Logic.getInstance();
 	}
-	
+	public ArrayList<Package> getPackageList() {
+		return logic.getPackageList();
+	}
 }
