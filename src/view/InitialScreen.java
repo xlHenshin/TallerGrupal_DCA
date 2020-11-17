@@ -32,6 +32,13 @@ public class InitialScreen extends ScreenFather{
 		}
 	}
 	
+	public void paintTicketNumber() {
+		
+		app.text(ticketOne, 967, 1510+posY);
+		app.text(ticketTwo, 411, 2896+posY);
+		app.text(ticketThree, 1026, 3889+posY);
+	}
+	
 	public void packageOne() {
 		if (app.mouseX > 938 && app.mouseX < 938 + 14
 				&& app.mouseY > 1500 + posY && app.mouseY < 1500 + 14 + posY) { //Aumentar tickets

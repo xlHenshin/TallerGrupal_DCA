@@ -64,6 +64,7 @@ public class Main extends PApplet {
 		switch (schange) {
 		case 0:
 			initialscreen.drawImage();
+			initialscreen.paintTicketNumber();
 			break;
 			
 		case 1:
