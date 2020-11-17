@@ -118,13 +118,16 @@ public class Main extends PApplet {
 	
 	public void mouseClicked() {
 		
-		//System.out.println("X= "+ mouseX);
-		//System.out.println("Y= "+ mouseY);
-		System.out.println("Schange is " + schange);
+		System.out.println("X= "+ mouseX);
+		System.out.println("Y= "+ mouseY);
+		//System.out.println("Schange is " + schange);
 		
 		
 		switch (schange) {
 		case 0:
+			initialscreen.packageOne();
+			initialscreen.packageTwo();
+			initialscreen.packageThree();
 			initialscreen.button();
 			schange=initialscreen.getChange();
 			break;
