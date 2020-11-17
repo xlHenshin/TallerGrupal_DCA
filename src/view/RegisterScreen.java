@@ -5,6 +5,14 @@ import controlP5.Textfield;
 import controller.ControlRegis;
 import processing.core.PApplet;
 
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla de Registro 
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
+
 public class RegisterScreen extends ScreenFather {
 
 	private int change = 2;
@@ -15,6 +23,10 @@ public class RegisterScreen extends ScreenFather {
 	private PApplet app;
 	private ControlP5 cp5;
 	
+	/**Constructor
+	 * @param posY
+	 * @param app
+	 */
 	public RegisterScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/registration.png");
@@ -59,6 +71,11 @@ public class RegisterScreen extends ScreenFather {
 		cp5.show();
 	}
 	
+	/**
+	 * Método que llama al constructor del contacto
+	 * para que las variables definidas en la pantalla 
+	 * de New Contact permitan crear un contacto nuevo 
+	 */
 	public void getUserInfo() {
 		
 		if (app.mouseX > 940 && app.mouseX < 940 + 190

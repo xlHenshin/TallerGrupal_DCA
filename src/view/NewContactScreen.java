@@ -5,6 +5,13 @@ import controlP5.Textfield;
 import controller.ControlNewContact;
 import processing.core.PApplet;
 
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla de New Contacts 
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
 
 public class NewContactScreen extends ScreenFather {
 
@@ -15,6 +22,11 @@ public class NewContactScreen extends ScreenFather {
 	private PApplet app;
 	private ControlP5 cp5;
 
+	
+	/**Constructor
+	 * @param posY
+	 * @param app
+	 */
 	public NewContactScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/newcontact.png");
@@ -55,6 +67,11 @@ public class NewContactScreen extends ScreenFather {
 
 	}
 
+	/**
+	 * Método que llama al constructor del contacto
+	 * para que las variables definidas en la pantalla 
+	 * de New Contact permitan crear un contacto nuevo
+	 */
 	public void getContactInfo() {
 
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
@@ -120,7 +137,6 @@ public void button () {
 		
 	
 }
-
 
 public int getChange() {
 	return change;

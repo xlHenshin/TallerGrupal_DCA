@@ -3,6 +3,13 @@ package view;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla principal (Landing Page) 
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
 public class InitialScreen extends ScreenFather{
 
 	private int change = 0;
@@ -11,6 +18,11 @@ public class InitialScreen extends ScreenFather{
 	private int ticketTwo=0;
 	private int ticketThree=0;
 	
+	/**
+	 * Constructor
+	 * @param posY
+	 * @param app
+	 */
 	public InitialScreen(int posY,PApplet app) {
 		super (posY,app);
 		screen = app.loadImage("../resources/Initial.png");

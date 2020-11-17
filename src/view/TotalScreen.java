@@ -2,14 +2,26 @@ package view;
 
 import processing.core.PApplet;
 
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla de Total
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ */
+
 public class TotalScreen extends ScreenFather{
 private int change=7;
+
+	/**Constructor
+	 * @param posY
+	 * @param app
+	 */
 	public TotalScreen(float posY, PApplet app) {
 		super(posY, app);
 		// TODO Auto-generated constructor stub
 		screen = app.loadImage("../resources/succesful.png");
 	}
 	public void button() {
+		
 		System.out.println("presionado total");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 

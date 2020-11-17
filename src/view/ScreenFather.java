@@ -3,6 +3,12 @@ package view;
 	import processing.core.PApplet;
 	import processing.core.PImage;
 
+	/**
+	 * Clase padre de donde las pantallas heredan los atributos
+	 * y métodos de pintar
+	 * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+	 */
+	
 	public class ScreenFather extends PApplet {
 
 		protected float posY;
