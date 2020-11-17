@@ -5,9 +5,9 @@ import processing.core.PApplet;
 import processing.event.MouseEvent;
 
 /**
- * Esta clase contiene todos los m�todos de las
+ * Esta clase contiene todos los métodos de las
  * pantallas y conexiones de la clase de logic
- * @author Andr�s Burgos, Cristian Mendez, Ang�lica Cruz
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
  */
 
 public class Main extends PApplet {
@@ -35,7 +35,7 @@ public class Main extends PApplet {
 	
 	public boolean error = false;
 	public boolean loginYes=false;
-	public int schange=0; //Acá se cambia pantalla
+	public int schange=0; //AcÃ¡ se cambia pantalla
 
 	
 	
@@ -60,8 +60,7 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		background(0);
-		
-		
+    
 		switch (schange) {
 		case 0:
 			initialscreen.drawImage();
@@ -74,7 +73,7 @@ public class Main extends PApplet {
 			if (error==true) {
 				loginscreen.errorMessage();
 			}
-			loginYes = loginscreen.isLoginYes();
+			loginYes=loginscreen.isLoginYes();
 			break;
 			
 		case 2:
@@ -105,9 +104,9 @@ public class Main extends PApplet {
 				if (error==true) {
 					buyscreen.errorMessage();
 				}
-				else {
-					schange=1;
-				}
+			}
+			else {
+				schange=1;
 			}
 			
 			break;
