@@ -6,11 +6,24 @@ import controller.ControlContact;
 import model.Contact;
 import processing.core.PApplet;
 
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla de Contactos 
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
 public class ContactScreen extends ScreenFather {
 
 	private ControlContact controlcontact;
 	
 	private int change=3;
+	
+	/**Constructor
+	 * @param posY
+	 * @param app
+	 */
+	
 	public ContactScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/contacts.png");

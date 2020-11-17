@@ -1,11 +1,19 @@
 package view;
 
-
-
 import controlP5.ControlP5;
 import controlP5.Textfield;
 import processing.core.PApplet;
 
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla de Buy
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ */
+
+/**
+ * @author angel
+ *
+ */
 public class BuyScreen extends ScreenFather{
 
 	private int change=5;
@@ -16,6 +24,10 @@ public class BuyScreen extends ScreenFather{
 	private boolean error=false;
 	private boolean errorLength = false;
 
+	/** Constructor
+	 * @param posY
+	 * @param app
+	 */
 	public BuyScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/payment.png");
@@ -29,9 +41,9 @@ public class BuyScreen extends ScreenFather{
 		input [2] = "MM";
 		input [3] = "YY";
 		input [4] = "CVV";
-		
+
 		cp5.hide();
-		
+
 		for (int i = 0; i < input.length; i++) {
 			cp5.addTextfield(input[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
 			.setAutoClear(true).setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
@@ -48,8 +60,10 @@ public class BuyScreen extends ScreenFather{
 
 		}
 	}*/
-
-public void button() {
+	
+	
+	public void button() {
+		
 		System.out.println("presionado buyScreen");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
@@ -81,33 +95,38 @@ public void button() {
 		}
 		if (app.mouseX > 719 && app.mouseX < 719 + 121
 				&& app.mouseY > 626 && app.mouseY < 626 + 28) {
+			
 			System.out.println("presionado check BS");
+			
 			cardholder = cp5.get(Textfield.class, "Cardholder Name").getText();
 			cardnumber = cp5.get(Textfield.class, "Card Number").getText();
 			mm = cp5.get(Textfield.class, "MM").getText();
 			yy = cp5.get(Textfield.class, "YY").getText();
 			cvv = cp5.get(Textfield.class, "CVV").getText();
 			System.out.println("presionado");
-				if (isString(cardholder) && isNumeric(cardnumber) && isNumeric(mm) &&
-						isNumeric(yy)  && isNumeric(cvv)) {
-					if (cardnumber.length() == 16 && mm.length() == 2 && yy.length() == 4
-							&& cvv.length() == 3) {
-						System.out.println("presionado");
-						change = 4;
-						cp5.hide();
-						error = false;
-						errorLength = false;
-					}
-					else {
-						errorLength = true;
-						error = true;
-					}	
+			
+			if (isString(cardholder) && isNumeric(cardnumber) && isNumeric(mm) &&
+					isNumeric(yy)  && isNumeric(cvv)) {
+				
+				if (cardnumber.length() == 16 && mm.length() == 2 && yy.length() == 4
+						&& cvv.length() == 3) {
+					
+					System.out.println("presionado");
+					change = 4;
+					cp5.hide();
+					error = false;
+					errorLength = false;
 				}
 				else {
+					errorLength = true;
 					error = true;
-				}
+				}	
 			}
-		
+			else {
+				error = true;
+			}
+		}
+
 
 		if (app.mouseX > 600 && app.mouseX < 600 + 100
 				&& app.mouseY > 626 && app.mouseY < 626 + 28) {// 	cancel Button 
@@ -118,21 +137,34 @@ public void button() {
 		}
 	}
 
+	/**
+	 * Método para declarar un mensaje de error en caso
+	 * de que se ingresen un número de dígitos equivocado
+	 */
 	public void errorMessage () {
+		
 		isString(cardholder);
 		isNumeric(cardnumber); 
 		isNumeric(mm);
 		isNumeric(yy); 
 		isNumeric(cvv);
 		if (errorLength==true) {
+			
 			app.fill(0);
-			app.text("las tarjetas deben presentan 16 digitos, los meses 2 digitos, los aï¿½os 4 digitos y los CVV 3 digitos", 640, 120);
+			app.text("las tarjetas deben presentan 16 digitos, los meses 2 digitos, los 4 digitos y los CVV 3 digitos", 640, 120);
 		}
 	}
 
+	/**
+	 * Método para lanzar una excepción 
+	 * en caso de que haya una letra en un campo
+	 * para ingresar caráctes numéricos
+	 * @param cadena
+	 * @return - resultado verdadero o falso
+	 */
 	public boolean isNumeric(String cadena) {
 
-		try {// se controla una posible excepcion
+		try { // se controla una posible excepcion
 			Long.parseLong(cadena);// si se logra guardar correctamente es un numero
 			resultado = true;
 		} catch (NumberFormatException excepcion) {//si no se logra guardar correctamente ocurre lo siguente:
@@ -142,13 +174,22 @@ public void button() {
 
 		return resultado;
 	}
+	
+	/**
+	 * Método para lanzar una excepción 
+	 * en caso de que haya un número en un campo
+	 * para ingresar caracteres de texto
+	 * 
+	 * @param cadena
+	 * @return - resultado verdadero o falso
+	 */
 	public boolean isString(String cadena) {
-
 
 		try {// se controla una posible excepcion
 			Integer.parseInt(cadena);// si se logra guardar correctamente es un numero
 			resultado = false;
-			app.text("hay un numero en alguno de los campos numericos", 70, 60);
+			app.text("hay un numero en alguno de los campos no numericos", 70, 60);
+			
 		} catch (NumberFormatException excepcion) {//si no se logra guardar correctamente ocurre lo siguente:
 			resultado = true;
 		}
@@ -165,6 +206,11 @@ public void button() {
 	}
 
 
+	/**
+	 * Método para comunicar al Main
+	 * si hay un error
+	 * @return
+	 */
 	public boolean isError() {
 		return error;
 	}
@@ -173,6 +219,10 @@ public void button() {
 		this.error = error;
 	}
 
+	/**
+	 * Método para mostrar cuando el usuario ingresa a la pantalla
+	 */
+	
 	public void mostrarP5() {
 		cp5.show();
 	}
