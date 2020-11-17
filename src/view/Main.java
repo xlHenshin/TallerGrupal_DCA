@@ -87,7 +87,7 @@ public class Main extends PApplet {
 			if (error==true) {
 				loginscreen.errorMessage();
 			}
-			loginMay=loginscreen.isLoginYes();
+			loginMay=loginscreen.isLoginYes());
 			break;
 			
 		case 2:
