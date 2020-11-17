@@ -67,7 +67,7 @@ public class Main extends PApplet {
 	public void draw() {
 		background(0);
 		loginYes=loginMay;
-		System.out.println(loginYes);
+		//System.out.println(loginYes);
 		ticketOne=ticket1;
 		ticketTwo=ticket2;
 		ticketThree = ticket3;

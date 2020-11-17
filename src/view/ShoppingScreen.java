@@ -21,7 +21,7 @@ public class ShoppingScreen extends ScreenFather {
 		
 		
 		if (tOne==true) {
-			System.out.println("si paso");
+			
 			ticketCase=1;
 		}
 		
@@ -31,7 +31,7 @@ public class ShoppingScreen extends ScreenFather {
 		}
 
 		if (tThree==true) {
-	
+			
 			ticketCase=3;
 		}
 		
