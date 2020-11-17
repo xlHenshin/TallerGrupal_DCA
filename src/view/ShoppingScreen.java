@@ -1,5 +1,6 @@
 package view;
 
+import controller.ControlBuy;
 import processing.core.PApplet;
 /**
  * Esta clase contiene métodos para
@@ -11,6 +12,7 @@ import processing.core.PApplet;
 
 public class ShoppingScreen extends ScreenFather {
 
+	private ControlBuy controlbuy;
 	private int change=0;
 	private boolean tOne=false;
 	private boolean tTwo=false;
@@ -21,6 +23,7 @@ public class ShoppingScreen extends ScreenFather {
 	public ShoppingScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/shoppingcart.png");
+		controlbuy= new ControlBuy();
 		}
 	
 	public void checkTicket() {
@@ -48,7 +51,11 @@ public class ShoppingScreen extends ScreenFather {
 		
 		switch (ticketCase) {
 		case 1:
-			
+			for (int i = 0; i < controlbuy.getPackageList().size(); i++) {
+				if (controlbuy.getPackageList().get(i).getName().equals("Moon")) {
+					controlbuy.getPackageList().get(i).drawData(815, 414, app);
+				}
+			}
 			break;
 			
 		case 2:

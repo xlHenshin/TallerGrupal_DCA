@@ -1,8 +1,11 @@
 package model;
 
+
+import processing.core.PApplet;
+
 /**
  * Clase que guarda la informacion de cada paquete
- * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ * @author AndrÃ©s Burgos, Cristian Mendez, AngÃ©lica Cruz
  */
 
 public class Package {
@@ -18,6 +21,13 @@ public class Package {
 		this.cost=cost;
 	}
 
+	public void drawData(int x, int y, PApplet app) {
+
+		//System.out.println(name+lastName+mail+age+nationality+cellNumber);
+		app.fill(0);
+		app.text(name, x, y);
+		app.text(cost, x+ 20*4, y );
+	}
 	public String getDescription() {
 		return description;
 	}
