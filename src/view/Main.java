@@ -4,13 +4,23 @@ package view;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
-public class Main extends PApplet {
+/**
+ * Esta clase contiene todos los métodos de las
+ * pantallas y conexiones de la clase de logic
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ */
 
+public class Main extends PApplet {
 	
+	 
+	/**
+	 * Constructor de la clase
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		PApplet.main(Main.class.getName());
-	}
+	} 
 	
 	InitialScreen initialscreen;
 	LoginScreen loginscreen;
@@ -22,17 +32,18 @@ public class Main extends PApplet {
 	TotalScreen totalscreen;
 	ShoppingScreen shoppingscreen;
 
+	
 	public boolean error = false;
 	public boolean loginYes=false;
 	public int schange=0; //AcÃ¡ se cambia pantalla
 
 	
 	
-	
 	public void settings() {
 		size(1440, 810);
 	}
 	
+
 	public void setup() {
 		
 		initialscreen= new InitialScreen(0,this);
@@ -49,6 +60,7 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		background(0);
+		
 		
 		switch (schange) {
 		case 0:
@@ -188,6 +200,7 @@ public class Main extends PApplet {
 			break;
 		}
 	}
+	
 	public void mouseWheel(MouseEvent event) {
 		if (event.getCount() == 1.0) {
 			initialscreen.scrollingPlus();
