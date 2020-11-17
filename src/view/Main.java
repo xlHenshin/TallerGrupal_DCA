@@ -33,8 +33,8 @@ public class Main extends PApplet {
 	ShoppingScreen shoppingscreen;
 	
 	public boolean error = false;
-	public boolean loginYes=false;
-	public boolean loginMay=false;
+	public int loginYes=0;
+	public int loginMay = 0;
 	public int schange=0;
 	public int ticketOne=0;
 	public int ticket1=0;
@@ -67,7 +67,7 @@ public class Main extends PApplet {
 	public void draw() {
 		background(0);
 		loginYes=loginMay;
-		System.out.println(loginYes);
+		System.out.println(loginMay);
 		ticketOne=ticket1;
 		ticketTwo=ticket2;
 		ticketThree = ticket3;
@@ -111,7 +111,7 @@ public class Main extends PApplet {
 			break;
 			
 		case 5:
-			if (loginYes == true) {
+			if (loginYes == 1) {
 				buyscreen.drawImage();
 				buyscreen.mostrarP5();
 				error=buyscreen.isError();
