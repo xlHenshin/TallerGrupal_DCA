@@ -1,12 +1,12 @@
 package view;
 
 import processing.core.PApplet;
+
 /**
  * Esta clase contiene métodos para
  * el funcionamiento de la pantalla de Bill
  * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
  */
-
 
 public class BillScreen extends ScreenFather{
 
@@ -61,7 +61,8 @@ public class BillScreen extends ScreenFather{
 	}
 	
 	/**
-	 * Método para cambiar la variable Change
+	 * Método que permite que la variable change tome el valor
+	 * que haya por entrada en el método
 	 * @param change
 	 */
 	public void setChange(int change) {
