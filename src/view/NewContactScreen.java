@@ -59,6 +59,7 @@ public class NewContactScreen extends ScreenFather {
 
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
 				&& app.mouseY > 555 && app.mouseY < 555 + 40) {
+			System.out.println("presionado newContact");
 			System.out.println("Click on btn");
 
 			firstName = cp5.get(Textfield.class, "First Name").getText();
@@ -84,7 +85,7 @@ public class NewContactScreen extends ScreenFather {
 	}
 
 public void button () {
-	
+	System.out.println("presionado newContact");
 	if (app.mouseX > 647 && app.mouseX < 647 + 137
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 		System.out.println("presionado IS");

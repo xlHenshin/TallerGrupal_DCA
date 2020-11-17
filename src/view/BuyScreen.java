@@ -50,7 +50,7 @@ public class BuyScreen extends ScreenFather{
 	}*/
 
 public void button() {
-		System.out.println("lloro");
+		System.out.println("presionado buyScreen");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 			System.out.println("presionado IS BS");

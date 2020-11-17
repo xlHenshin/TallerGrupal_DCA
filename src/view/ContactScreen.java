@@ -57,6 +57,7 @@ public class ContactScreen extends ScreenFather {
 	}
 	
 	public void button() {
+		System.out.println("presionado contact");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) {// 	InitialScreen Button 
 			change = 0;

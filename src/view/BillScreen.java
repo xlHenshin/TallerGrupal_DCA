@@ -10,6 +10,7 @@ public class BillScreen extends ScreenFather{
 		screen = app.loadImage("../resources/Bill.png");
 	}
 	public void button() {
+		System.out.println("presionado bill");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) // 	InitialScreen Button 
 			change = 0;

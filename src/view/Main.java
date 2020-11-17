@@ -1,5 +1,7 @@
 package view;
 
+import controlP5.ControlP5;
+import controller.ControlContact;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
@@ -56,6 +58,10 @@ public class Main extends PApplet {
 		case 1:
 			loginscreen.drawImage();
 			loginscreen.mostrarP5();
+			error=loginscreen.isError();
+			if (error==true) {
+				loginscreen.errorMessage();
+			}
 			break;
 			
 		case 2:
@@ -113,9 +119,9 @@ public class Main extends PApplet {
 	
 	public void mouseClicked() {
 		
-		System.out.println("X= "+ mouseX);
-		System.out.println("Y= "+ mouseY);
-		
+		//System.out.println("X= "+ mouseX);
+		//System.out.println("Y= "+ mouseY);
+		System.out.println("Schange is " + schange);
 		
 		
 		switch (schange) {
@@ -158,7 +164,6 @@ public class Main extends PApplet {
 		case 6: 
 			newcontactscreen.button();
 			schange=newcontactscreen.getChange();
-			
 			newcontactscreen.getContactInfo();
 			break;
 			

@@ -24,6 +24,7 @@ public class InitialScreen extends ScreenFather{
 		}
 	}
 	public void button() {
+		System.out.println("presionado initial");
 		if (app.mouseX > 815 && app.mouseX < 815 + 60
 				&& app.mouseY > 37 + posY && app.mouseY < 37 + 19 + posY) // 	Contacts Button
 			change = 3;

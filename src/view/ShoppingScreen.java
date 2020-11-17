@@ -9,6 +9,7 @@ private int change=0;
 		screen = app.loadImage("../resources/shoppingcart.png");
 		}
 	public void button() {
+		System.out.println("presionado Shopping");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) // 	InitialScreen Button 
 			change = 0;
