@@ -31,27 +31,27 @@ public class ContactScreen extends ScreenFather {
 		
 		if (app.mouseX > 742 && app.mouseX < 742 + 84
 				&& app.mouseY > 324 && app.mouseY < 324 + 16) { // 	SortBy Last Name
-			
+			controlcontact.sortLastName();
 		}
 		
 		if (app.mouseX > 835 && app.mouseX < 835 + 50
 				&& app.mouseY > 324 && app.mouseY < 324 + 16) { // 	SortBy Email
-			
+			controlcontact.sortMail();
 		}
 		
 		if (app.mouseX > 898 && app.mouseX < 898 + 50
 				&& app.mouseY > 324 && app.mouseY < 324 + 16) { // 	SortBy Age
-			
+			controlcontact.sortAge();
 		}
 		
 		if (app.mouseX > 968 && app.mouseX < 968 + 84
 				&& app.mouseY > 324 && app.mouseY < 324 + 16) { // 	SortBy Nationality
-			
+			controlcontact.sortNationality();
 		}
 		
 		if (app.mouseX > 1056 && app.mouseX < 1056 + 125
 				&& app.mouseY > 324 && app.mouseY < 324 + 16) { // 	SortBy Cellphone Number
-			
+			controlcontact.sortCellNumber();
 		}
 		
 	}
