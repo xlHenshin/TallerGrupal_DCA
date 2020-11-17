@@ -5,9 +5,9 @@ import processing.core.PApplet;
 import processing.event.MouseEvent;
 
 /**
- * Esta clase contiene todos los métodos de las
+ * Esta clase contiene todos los mÃ©todos de las
  * pantallas y conexiones de la clase de logic
- * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ * @author AndrÃ©s Burgos, Cristian Mendez, AngÃ©lica Cruz
  */
 
 public class Main extends PApplet {
@@ -31,11 +31,17 @@ public class Main extends PApplet {
 	NewContactScreen newcontactscreen;
 	TotalScreen totalscreen;
 	ShoppingScreen shoppingscreen;
-
 	
 	public boolean error = false;
-	public boolean loginYes=false;
-	public int schange=0; //AcÃ¡ se cambia pantalla
+	public int loginYes=0;
+	public int loginMay=0;
+	public int schange=0;
+	public int ticketOne=0;
+	public int ticket1=0;
+	public int ticketTwo=0;
+	public int ticket2=0;
+	public int ticketThree=0;
+	public int ticket3=0;
 
 	
 	
@@ -60,11 +66,18 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		background(0);
-		
-		
+		loginYes=loginMay;
+		//System.out.println(loginYes);
+		ticketOne=ticket1;
+		ticketTwo=ticket2;
+		ticketThree = ticket3;
 		switch (schange) {
 		case 0:
+			ticket1 = initialscreen.getTicketOne();
+			ticket2 = initialscreen.getTicketTwo();
+			ticket3 = initialscreen.getTicketThree();
 			initialscreen.drawImage();
+			initialscreen.paintTicketNumber();
 			break;
 			
 		case 1:
@@ -74,7 +87,7 @@ public class Main extends PApplet {
 			if (error==true) {
 				loginscreen.errorMessage();
 			}
-			loginYes = loginscreen.isLoginYes();
+			loginMay=loginscreen.isLoginYes();
 			break;
 			
 		case 2:
@@ -98,16 +111,16 @@ public class Main extends PApplet {
 			break;
 			
 		case 5:
-			if (loginYes == true) {
+			if (loginYes == 1) {
 				buyscreen.drawImage();
 				buyscreen.mostrarP5();
 				error=buyscreen.isError();
 				if (error==true) {
 					buyscreen.errorMessage();
 				}
-				else {
-					schange=1;
-				}
+			}
+			else {
+				schange=1;
 			}
 			
 			break;
@@ -122,7 +135,17 @@ public class Main extends PApplet {
 			totalscreen.drawImage();
 			break;
 			
-		case 8: 
+		case 8:
+			if (ticketOne > 0) {
+				shoppingscreen.settOne(true);
+			}
+			if (ticketTwo > 0) {
+				shoppingscreen.settTwo(true);
+			}
+			if (ticketThree > 0) {
+				shoppingscreen.settThree(true);
+			}
+			shoppingscreen.checkTicket();
 			shoppingscreen.drawImage();
 			break;
 			
@@ -142,7 +165,6 @@ public class Main extends PApplet {
 		System.out.println("X= "+ mouseX);
 		System.out.println("Y= "+ mouseY);
 		//System.out.println("Schange is " + schange);
-		
 		
 		switch (schange) {
 		case 0:

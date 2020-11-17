@@ -22,7 +22,7 @@ public class LoginScreen extends ScreenFather{
 	private String email, password;
 	private PApplet app;
 	private ControlP5 cp5;
-	private boolean loginYes=false;
+	private int loginYes=1;
 	private boolean error=false;
 	
 	/**Constructor
@@ -84,7 +84,7 @@ public class LoginScreen extends ScreenFather{
 			for (int i = 0; i < controllogin.getUserList().size(); i++) {
 				if (controllogin.getUserList().get(i).getMail().equals(email) && controllogin.getUserList().get(i).getPassword().equals(password)) {
 					change = 0;
-					loginYes=true;
+					loginYes=1;
 					cp5.hide();
 				}
 				else {
@@ -115,11 +115,11 @@ public class LoginScreen extends ScreenFather{
 		this.error = error;
 	}
 
-	public boolean isLoginYes() {
+	public int isLoginYes() {
 		return loginYes;
 	}
 
-	public void setLoginYes(boolean loginYes) {
+	public void setLoginYes(int loginYes) {
 		this.loginYes = loginYes;
 	}
 	

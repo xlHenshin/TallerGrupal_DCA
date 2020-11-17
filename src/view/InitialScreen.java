@@ -4,9 +4,9 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 /**
- * Esta clase contiene métodos para
+ * Esta clase contiene mï¿½todos para
  * el funcionamiento de la pantalla principal (Landing Page) 
- * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ * @author Andrï¿½s Burgos, Cristian Mendez, Angï¿½lica Cruz
  *
  */
 
@@ -17,12 +17,10 @@ public class InitialScreen extends ScreenFather{
 	private int ticketOne=0;
 	private int ticketTwo=0;
 	private int ticketThree=0;
-	
-	/**
-	 * Constructor
-	 * @param posY
-	 * @param app
-	 */
+	private boolean tOne=false;
+	private boolean tTwo=false;
+	private boolean tThree=false;
+
 	public InitialScreen(int posY,PApplet app) {
 		super (posY,app);
 		screen = app.loadImage("../resources/Initial.png");
@@ -38,6 +36,13 @@ public class InitialScreen extends ScreenFather{
 			posY+=30;
 			System.out.println(posY);
 		}
+	}
+	
+	public void paintTicketNumber() {
+		
+		app.text(ticketOne, 967, 1510+posY);
+		app.text(ticketTwo, 411, 2896+posY);
+		app.text(ticketThree, 1026, 3889+posY);
 	}
 	
 	public void packageOne() {
@@ -72,6 +77,7 @@ public class InitialScreen extends ScreenFather{
 				System.out.println("Add a ticket to buy");
 			}else {
 				
+				tOne = true;
 				change = 8;
 			}
 			
@@ -112,6 +118,7 @@ public class InitialScreen extends ScreenFather{
 				System.out.println("Add a ticket to buy");
 			}else {
 				
+				tTwo = true;
 				change = 8;
 			}
 			
@@ -151,6 +158,7 @@ public class InitialScreen extends ScreenFather{
 				System.out.println("Add a ticket to buy");
 			}else {
 				
+				tThree = true;
 				change = 8;
 			}
 		}
@@ -158,6 +166,7 @@ public class InitialScreen extends ScreenFather{
 	
 	public void button() {
 		//System.out.println("presionado initial");
+		
 		if (app.mouseX > 815 && app.mouseX < 815 + 60
 				&& app.mouseY > 37 + posY && app.mouseY < 37 + 19 + posY) // 	Contacts Button
 			change = 3;
@@ -208,7 +217,32 @@ public class InitialScreen extends ScreenFather{
 	public void setTicketThree(int ticketThree) {
 		this.ticketThree = ticketThree;
 	}
-	
 
+	public boolean istOne() {
+		return tOne;
+	}
+
+	public void settOne(boolean tOne) {
+		this.tOne = tOne;
+	}
+
+	public boolean istTwo() {
+		return tTwo;
+	}
+
+	public void settTwo(boolean tTwo) {
+		this.tTwo = tTwo;
+	}
+
+	public boolean istThree() {
+		return tThree;
+	}
+
+	public void settThree(boolean tThree) {
+		this.tThree = tThree;
+	}
+	
+	
+	
 	}
 
