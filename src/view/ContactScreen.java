@@ -35,6 +35,11 @@ public class ContactScreen extends ScreenFather {
 		return controlcontact.contactList();
 	}
 	
+	
+	/**
+	 * Método para crear los botones
+	 * que controlan el ordenamiento
+	 */
 	public void sortList() {
 		
 		if (app.mouseX > 646 && app.mouseX < 646 + 84
@@ -70,7 +75,9 @@ public class ContactScreen extends ScreenFather {
 	}
 	
 	public void button() {
+		
 		System.out.println("presionado contact");
+		
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) {// 	InitialScreen Button 
 			change = 0;

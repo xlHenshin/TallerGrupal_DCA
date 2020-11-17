@@ -6,6 +6,12 @@ import java.util.LinkedList;
 
 import processing.core.PApplet;
 
+/**
+ * Clase que maneja la lógica del programa
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
 public class Logic extends PApplet {
 
 	private LinkedList<Contact> contactList;
@@ -52,18 +58,6 @@ public class Logic extends PApplet {
 	}
 
 
-	public void drawPackages() {
-
-	}
-
-	public void buttonPressed() {
-
-	}
-
-	public void logic() {
-
-	}
-
 	public void sortName() {
 
 		Collections.sort(contactList);
@@ -93,6 +87,14 @@ public class Logic extends PApplet {
 		Collections.sort(contactList, Contact.Comparators.CELLNUMBER);
 	}
 
+	/**Método que registra usuario
+	 * @param firstName
+	 * @param lastName
+	 * @param email
+	 * @param password
+	 * @param nationality
+	 * @param cellphoneNumber
+	 */
 	public void newUserForm(String firstName, String lastName, String email, String password, String nationality,
 			String cellphoneNumber) {
 		User newUser = new User(firstName, lastName, email, password, nationality, cellphoneNumber, app);
@@ -112,6 +114,14 @@ public class Logic extends PApplet {
 	}
 
 
+	/** Método que registra un contacto
+	 * @param firstName
+	 * @param lastName
+	 * @param email
+	 * @param age
+	 * @param nationality
+	 * @param cellphoneNumber
+	 */
 	public void newContactForm(String firstName, String lastName, String email, String age, String nationality,
 			String cellphoneNumber) {
 
@@ -131,10 +141,7 @@ public class Logic extends PApplet {
 		}
 	}
 
-	public void writeArray() {
-
-	}
-
+	
 	public LinkedList<Contact> getContactList() {
 		return contactList;
 	}

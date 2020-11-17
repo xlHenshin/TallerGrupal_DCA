@@ -2,6 +2,12 @@ package model;
 
 import processing.core.PApplet;
 
+/**
+ * Clase que guarda la información del usuario al registrarse
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
 public class User extends Person{
 
 	private String password;

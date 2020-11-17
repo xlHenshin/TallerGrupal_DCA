@@ -1,6 +1,12 @@
 package model;
 
+
 import processing.core.PApplet;
+
+/**
+ * Clase que guarda la informacion de cada paquete
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ */
 
 public class Package {
 

@@ -2,6 +2,13 @@ package view;
 
 import controller.ControlBuy;
 import processing.core.PApplet;
+/**
+ * Esta clase contiene métodos para
+ * el funcionamiento de la pantalla de Shopping Cart
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ *
+ */
+
 
 public class ShoppingScreen extends ScreenFather {
 
