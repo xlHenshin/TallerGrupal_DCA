@@ -1,5 +1,7 @@
 package view;
 
+import controlP5.ControlP5;
+import controller.ControlContact;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
