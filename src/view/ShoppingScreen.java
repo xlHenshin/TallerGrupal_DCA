@@ -3,11 +3,59 @@ package view;
 import processing.core.PApplet;
 
 public class ShoppingScreen extends ScreenFather {
-private int change=0;
+
+	private int change=0;
+	private boolean tOne=false;
+	private boolean tTwo=false;
+	private boolean tThree=false;
+	
+	private int ticketCase=0;
+	
 	public ShoppingScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/shoppingcart.png");
 		}
+	
+	public void checkTicket() {
+		
+		if (tOne==true) {
+			
+			ticketCase=1;
+		}
+		
+		if (tTwo==true) {
+			
+			ticketCase=2;
+		}
+
+		if (tThree==true) {
+	
+			ticketCase=3;
+		}
+		
+	}
+	
+	public void paintTicket() {
+		
+		switch (ticketCase) {
+		case 1:
+			
+			break;
+			
+		case 2:
+			
+			break;
+			
+		case 3:
+			
+			break;
+
+		default:
+			break;
+		}
+		
+	}
+	
 	public void button() {
 		System.out.println("presionado Shopping");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137

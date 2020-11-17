@@ -34,22 +34,22 @@ public class RegisterScreen extends ScreenFather {
 		
 		cp5.hide();
 		
-		cp5.addTextfield(inputs[0]).setPosition((app.width / 2) - 100, 364).setSize(235, 35).setAutoClear(true)
+		cp5.addTextfield(inputs[0]).setPosition((app.width / 2) - 100, 350).setSize(235, 48).setAutoClear(true)
 		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 		
-		cp5.addTextfield(inputs[1]).setPosition((app.width / 2) - -170, 364).setSize(235, 35).setAutoClear(true)
+		cp5.addTextfield(inputs[1]).setPosition((app.width / 2) - -170, 350).setSize(235, 48).setAutoClear(true)
 		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 		
-		cp5.addTextfield(inputs[2]).setPosition((app.width / 2) - 100, 430).setSize(235, 35).setAutoClear(true)
+		cp5.addTextfield(inputs[2]).setPosition((app.width / 2) - 100, 418).setSize(235, 48).setAutoClear(true)
 		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 		
-		cp5.addTextfield(inputs[3]).setPosition((app.width / 2) - -170, 430).setSize(235, 35).setAutoClear(true)
+		cp5.addTextfield(inputs[3]).setPosition((app.width / 2) - -170, 418).setSize(235, 48).setAutoClear(true)
 		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 		
-		cp5.addTextfield(inputs[4]).setPosition((app.width / 2) - 100, 497).setSize(235, 35).setAutoClear(true)
+		cp5.addTextfield(inputs[4]).setPosition((app.width / 2) - 100, 485).setSize(235, 48).setAutoClear(true)
 		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 		
-		cp5.addTextfield(inputs[5]).setPosition((app.width / 2) - -170, 497).setSize(235, 35).setAutoClear(true)
+		cp5.addTextfield(inputs[5]).setPosition((app.width / 2) - -170, 485).setSize(235, 48).setAutoClear(true)
 		.setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
 			
 		

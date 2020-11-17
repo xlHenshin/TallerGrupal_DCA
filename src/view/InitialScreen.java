@@ -11,6 +11,10 @@ public class InitialScreen extends ScreenFather{
 	private int ticketTwo=0;
 	private int ticketThree=0;
 	
+	private boolean tOne=false;
+	private boolean tTwo=false;
+	private boolean tThree=false;
+	
 	public InitialScreen(int posY,PApplet app) {
 		super (posY,app);
 		screen = app.loadImage("../resources/Initial.png");
@@ -60,6 +64,7 @@ public class InitialScreen extends ScreenFather{
 				System.out.println("Add a ticket to buy");
 			}else {
 				
+				tOne = true;
 				change = 8;
 			}
 			
@@ -100,6 +105,7 @@ public class InitialScreen extends ScreenFather{
 				System.out.println("Add a ticket to buy");
 			}else {
 				
+				tTwo = true;
 				change = 8;
 			}
 			
@@ -139,6 +145,7 @@ public class InitialScreen extends ScreenFather{
 				System.out.println("Add a ticket to buy");
 			}else {
 				
+				tThree = true;
 				change = 8;
 			}
 		}
@@ -146,6 +153,7 @@ public class InitialScreen extends ScreenFather{
 	
 	public void button() {
 		//System.out.println("presionado initial");
+		
 		if (app.mouseX > 815 && app.mouseX < 815 + 60
 				&& app.mouseY > 37 + posY && app.mouseY < 37 + 19 + posY) // 	Contacts Button
 			change = 3;
@@ -196,7 +204,32 @@ public class InitialScreen extends ScreenFather{
 	public void setTicketThree(int ticketThree) {
 		this.ticketThree = ticketThree;
 	}
-	
 
+	public boolean istOne() {
+		return tOne;
+	}
+
+	public void settOne(boolean tOne) {
+		this.tOne = tOne;
+	}
+
+	public boolean istTwo() {
+		return tTwo;
+	}
+
+	public void settTwo(boolean tTwo) {
+		this.tTwo = tTwo;
+	}
+
+	public boolean istThree() {
+		return tThree;
+	}
+
+	public void settThree(boolean tThree) {
+		this.tThree = tThree;
+	}
+	
+	
+	
 	}
 
