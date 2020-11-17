@@ -96,27 +96,27 @@ public void button () {
 	if (app.mouseX > 825 && app.mouseX < 825 + 65
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	Contacts Button
 		System.out.println("presionado Con");
-		//change = 3;
-		//cp5.hide();
+		change = 3;
+		cp5.hide();
 	}
 	if (app.mouseX > 975 && app.mouseX < 975 + 45
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Login Button
 		System.out.println("presionado log");
-		//change = 1;
-		//cp5.hide();
+		change = 1;
+		cp5.hide();
 	}
 	if (app.mouseX > 1096 && app.mouseX < 1096 + 82
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Register
 		System.out.println("presionado reg");
-		//change = 2;
-		//cp5.hide();
+		change = 2;
+		cp5.hide();
 	}
 	
 	if (app.mouseX > 940 && app.mouseX < 940 + 190
 			&& app.mouseY > 555 && app.mouseY < 555 + 40) {	// create contact
 		System.out.println("presionado cc");
-		//change=3;
-		//cp5.hide();
+		change=3;
+		cp5.hide();
 	}
 		
 	
