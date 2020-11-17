@@ -49,7 +49,7 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		background(0);
-		
+		System.out.println(loginYes);
 		switch (schange) {
 		case 0:
 			initialscreen.drawImage();
@@ -62,7 +62,7 @@ public class Main extends PApplet {
 			if (error==true) {
 				loginscreen.errorMessage();
 			}
-			loginYes = loginscreen.isLoginYes();
+			loginYes=loginscreen.isLoginYes();
 			break;
 			
 		case 2:
@@ -93,9 +93,9 @@ public class Main extends PApplet {
 				if (error==true) {
 					buyscreen.errorMessage();
 				}
-				else {
-					schange=1;
-				}
+			}
+			else {
+				schange=1;
 			}
 			
 			break;
