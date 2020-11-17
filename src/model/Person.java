@@ -1,13 +1,25 @@
 package model;
 
 import processing.core.PApplet;
-
+/**
+ * Person es la clase padre de la cual
+ * las clases Contact y User heredan sus atributos
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ */
 public abstract class Person extends PApplet {
 
 	PApplet app;
 	protected String name, lastName, mail, nationality;
 	protected String cellNumber;
 	
+	/**Constructor
+	 * @param name
+	 * @param lastName
+	 * @param mail
+	 * @param nationality
+	 * @param cellNumber
+	 * @param app
+	 */
 	public Person(String name, String lastName, String mail, String nationality, String cellNumber, PApplet app) {
 		
 		this.name = name;

@@ -3,18 +3,38 @@ package model;
 import java.util.Comparator;
 
 import processing.core.PApplet;
-
+/**
+ * Esta clase guarda los contactos que el usuario
+ * desea agregar a su plan
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ */
 public class Contact extends Person implements Comparable<Contact> {
 
 	private String age;
 	private PApplet app;
 
+	/**Constructor
+	 * @param name
+	 * @param lastName
+	 * @param mail
+	 * @param age
+	 * @param nationality
+	 * @param cellNumber
+	 * @param app
+	 */
 	public Contact(String name, String lastName, String mail, String age, String nationality, String cellNumber, PApplet app) {
 		super(name, lastName, mail, nationality, cellNumber, app);
 		this.app=app;
 		this.age=age;
 	}
 	
+	
+	/**Método que pinta la información
+	 * de los contactos en la pantalla
+	 * @param x
+	 * @param y
+	 * @param app
+	 */
 	public void drawData(int x, int y, PApplet app) {
 
 		//System.out.println(name+lastName+mail+age+nationality+cellNumber);

@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * Clase que guarda la informacion de cada paquete
+ * @author Andrés Burgos, Cristian Mendez, Angélica Cruz
+ */
+
 public class Package {
 
 	private String description, name, duration;
