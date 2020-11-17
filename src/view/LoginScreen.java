@@ -17,6 +17,7 @@ public class LoginScreen extends ScreenFather{
 	public LoginScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/login.png");
+
 		this.app=app;
 		cp5 = new ControlP5(app);
 		
@@ -36,6 +37,7 @@ public class LoginScreen extends ScreenFather{
 	
 	public void mostrarP5() {
 		cp5.show();
+
 	}
 	
 	public void button() {

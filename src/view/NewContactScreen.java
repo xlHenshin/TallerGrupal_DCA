@@ -58,7 +58,7 @@ public class NewContactScreen extends ScreenFather {
 	public void getContactInfo() {
 
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
-				&& app.mouseY > 55 && app.mouseY < 555 + 40) {
+				&& app.mouseY > 555 && app.mouseY < 555 + 40) {
 			System.out.println("Click on btn");
 			
 			cp5.hide();
@@ -87,32 +87,36 @@ public class NewContactScreen extends ScreenFather {
 
 public void button () {
 	
-	
 	if (app.mouseX > 647 && app.mouseX < 647 + 137
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
+		System.out.println("presionado IS");
 		change = 0;
 		cp5.hide();
 	}
 	if (app.mouseX > 825 && app.mouseX < 825 + 65
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	Contacts Button
-		change = 3;
-		cp5.hide();
+		System.out.println("presionado Con");
+		//change = 3;
+		//cp5.hide();
 	}
 	if (app.mouseX > 975 && app.mouseX < 975 + 45
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Login Button
-		change = 1;
-		cp5.hide();
+		System.out.println("presionado log");
+		//change = 1;
+		//cp5.hide();
 	}
 	if (app.mouseX > 1096 && app.mouseX < 1096 + 82
 			&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Register
-		change = 2;
-		cp5.hide();
+		System.out.println("presionado reg");
+		//change = 2;
+		//cp5.hide();
 	}
 	
 	if (app.mouseX > 940 && app.mouseX < 940 + 190
-			&& app.mouseY > 55 && app.mouseY < 555 + 40) {	// create contact
-		change=3;
-		cp5.hide();
+			&& app.mouseY > 555 && app.mouseY < 555 + 40) {	// create contact
+		System.out.println("presionado cc");
+		//change=3;
+		//cp5.hide();
 	}
 		
 	

@@ -61,8 +61,8 @@ public class RegisterScreen extends ScreenFather {
 	public void getUserInfo() {
 		
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
-				&& app.mouseY > 55 && app.mouseY < 555 + 40) {
-			System.out.println("Click on btn");
+				&& app.mouseY > 555 && app.mouseY < 555 + 40) {
+			System.out.println("presionado get RS");
 			
 			cp5.hide();
 
@@ -87,40 +87,41 @@ public class RegisterScreen extends ScreenFather {
 	public void button() {
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
+			System.out.println("presionado landing RS");
 			change = 0;
-			cp5.hide();
 		}
-			
 		if (app.mouseX > 825 && app.mouseX < 825 + 65
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	Contacts Button
+			System.out.println("presionado con RS");
 			change = 3;
 			cp5.hide();
 		}
-		
 		if (app.mouseX > 975 && app.mouseX < 975 + 45
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Login Button
+			System.out.println("presionado log RS");
 			change = 1;
 			cp5.hide();
-		}
-		
+	  }
 		if (app.mouseX > 1096 && app.mouseX < 1096 + 82
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Register
+			System.out.println("presionado reg RS");
 			change = 2;
 			cp5.hide();
 		}
-		
-		if (app.mouseX > 647 && app.mouseX < 647 + 137
+    
+    if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
 			change = 0;
 			cp5.hide();
 		}
-		
+    
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
-				&& app.mouseY > 55 && app.mouseY < 555 + 40) {
-			change =1 ;
+				&& app.mouseY > 555 && app.mouseY < 555 + 40) {
+			System.out.println("presionado register RS");
+		
+      change =1 ;
 			cp5.hide();
-		}
-			
+	  }
 	}
 
 	public int getChange() {
@@ -130,5 +131,8 @@ public class RegisterScreen extends ScreenFather {
 	public void setChange(int change) {
 		this.change = change;
 	}
-	
+	public void mostrarP5() {
+		cp5.show();
+	}
+
 }

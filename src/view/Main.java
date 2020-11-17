@@ -42,7 +42,6 @@ public class Main extends PApplet {
 		newcontactscreen= new NewContactScreen(0,this);
 		totalscreen= new TotalScreen(0,this);
 		shoppingscreen= new ShoppingScreen(0,this);
-		
 	}
 	
 	public void draw() {
@@ -114,7 +113,7 @@ public class Main extends PApplet {
 		
 		System.out.println("X= "+ mouseX);
 		System.out.println("Y= "+ mouseY);
-		
+		System.out.println(schange);
 		
 		
 		switch (schange) {
@@ -126,7 +125,6 @@ public class Main extends PApplet {
 		case 1:
 			loginscreen.button();
 			schange=loginscreen.getChange();
-			System.out.println(schange);
 			break;
 			
 		case 2:
