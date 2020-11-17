@@ -77,6 +77,7 @@ public class Main extends PApplet {
 			ticket2 = initialscreen.getTicketTwo();
 			ticket3 = initialscreen.getTicketThree();
 			initialscreen.drawImage();
+			initialscreen.paintTicketNumber();
 			break;
 			
 		case 1:
