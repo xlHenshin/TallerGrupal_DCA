@@ -126,7 +126,7 @@ public void button() {
 		isNumeric(cvv);
 		if (errorLength==true) {
 			app.fill(0);
-			app.text("las tarjetas deben presentan 16 digitos, los meses 2 digitos, los años 4 digitos y los CVV 3 digitos", 640, 120);
+			app.text("las tarjetas deben presentan 16 digitos, los meses 2 digitos, los aï¿½os 4 digitos y los CVV 3 digitos", 640, 120);
 		}
 	}
 

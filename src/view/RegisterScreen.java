@@ -131,8 +131,5 @@ public class RegisterScreen extends ScreenFather {
 	public void setChange(int change) {
 		this.change = change;
 	}
-	public void mostrarP5() {
-		cp5.show();
-	}
 
 }
