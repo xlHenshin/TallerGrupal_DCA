@@ -60,8 +60,6 @@ public class NewContactScreen extends ScreenFather {
 		if (app.mouseX > 940 && app.mouseX < 940 + 190
 				&& app.mouseY > 555 && app.mouseY < 555 + 40) {
 			System.out.println("Click on btn");
-			
-			cp5.hide();
 
 			firstName = cp5.get(Textfield.class, "First Name").getText();
 			lastName = cp5.get(Textfield.class, "Last Name").getText();
