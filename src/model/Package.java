@@ -2,11 +2,15 @@ package model;
 
 public class Package {
 
-	private String description, name;
-	private int duration, cost;
+	private String description, name, duration;
+	private int cost;
 	
-	public Package() {
+	public Package(String name, String description, String duration, int cost) {
 		
+		this.name=name;
+		this.description=description;
+		this.duration=duration;
+		this.cost=cost;
 	}
 
 	public String getDescription() {
@@ -25,11 +29,11 @@ public class Package {
 		this.name = name;
 	}
 
-	public int getDuration() {
+	public String getDuration() {
 		return duration;
 	}
 
-	public void setDuration(int duration) {
+	public void setDuration(String duration) {
 		this.duration = duration;
 	}
 
