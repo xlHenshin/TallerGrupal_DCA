@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 
 import processing.core.PApplet;
@@ -11,28 +12,29 @@ public class Logic extends PApplet {
 	private ArrayList<User> userList;
 	private ArrayList<Package> packageList;
 	private ArrayList<Package> buyList;
-	
+
 	private static PApplet app;
-	
+
 	private static Logic unicaInstance;
-	
+
 	private Logic(PApplet app) {
+
 		Logic.app = app;
 		userList = new ArrayList<User>();
 		contactList = new LinkedList<Contact>();
-		
+
 		User cristian= new User("Cristian", "Mendez", "crisdamencast@gmail.com", "12345", "Colombiano", "1234567", app);
 		userList.add(cristian);
-		
+
 		Contact elon= new Contact("Elon", "Musk", "espeiseks@egomusk.com", "49", "Sudafricano", "00000", app);
 		Contact amber= new Contact("Amber", "Heard", "johnnydepp@gmail.com", "34", "Estadounidense", "11111", app);
 		Contact cara= new Contact("Cara", "Delevigne", "trioespacial@gmail.com", "28", "Inglesa", "22222", app);
-		
+
 		contactList.add(elon);
 		contactList.add(amber);
 		contactList.add(cara);
 	}
-	
+
 	public static Logic getInstance() {
 		if(unicaInstance == null) {
 			unicaInstance = new Logic(app);
@@ -40,26 +42,55 @@ public class Logic extends PApplet {
 		return unicaInstance;
 	}
 
-	
+
 	public void drawPackages() {
-		
+
 	}
-	
+
 	public void buttonPressed() {
-		
+
 	}
-	
+
 	public void logic() {
-		
+
 	}
-	
+
+	public void sortName() {
+
+		Collections.sort(contactList);
+	}
+
+	public void sortLastName() {
+
+		Collections.sort(contactList, Contact.Comparators.LASTNAME);
+	}
+
+	public void sortMail() {
+
+		Collections.sort(contactList, Contact.Comparators.MAIL);
+	}
+	public void sortAge() {
+
+		Collections.sort(contactList, Contact.Comparators.AGE);
+	}
+
+	public void sortNationality() {
+
+		Collections.sort(contactList, Contact.Comparators.NATIONALITY);
+	}
+
+	public void sortCellNumber() {
+
+		Collections.sort(contactList, Contact.Comparators.CELLNUMBER);
+	}
+
 	public void newUserForm(String firstName, String lastName, String email, String password, String nationality,
 			String cellphoneNumber) {
 		User newUser = new User(firstName, lastName, email, password, nationality, cellphoneNumber, app);
 		userList.add(newUser);
-		
+
 		for(int i = 0; i<userList.size();i++) {
-			
+
 			System.out.println(">>>>>>>>><<<<<<<<<<");
 			System.out.println(userList.get(i).getName());
 			System.out.println(userList.get(i).getLastName());
@@ -70,16 +101,16 @@ public class Logic extends PApplet {
 			System.out.println(">>>>>>>>><<<<<<<<<<");
 		}
 	}
-	
-	
+
+
 	public void newContactForm(String firstName, String lastName, String email, String age, String nationality,
 			String cellphoneNumber) {
-		
+
 		Contact newContact = new Contact(firstName, lastName, email, age, nationality, cellphoneNumber, app);
 		contactList.add(newContact);
-		
+
 		for(int i = 0; i<contactList.size();i++) {
-			
+
 			System.out.println(">>>>>>>>><<<<<<<<<<");
 			System.out.println(contactList.get(i).getName());
 			System.out.println(contactList.get(i).getLastName());
@@ -90,9 +121,9 @@ public class Logic extends PApplet {
 			System.out.println(">>>>>>>>><<<<<<<<<<");
 		}
 	}
-	
+
 	public void writeArray() {
-		
+
 	}
 
 	public LinkedList<Contact> getContactList() {
@@ -127,7 +158,7 @@ public class Logic extends PApplet {
 		this.buyList = buyList;
 	}
 
-	
-	
-	
+
+
+
 }

@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 import model.Contact;
@@ -22,4 +23,32 @@ public class ControlContact {
 		
 	}
 	
+	public void sortName() {
+		logic.sortName();
+	}
+
+	public void sortLastName() {
+
+		logic.sortLastName();
+	}
+
+	public void sortMail() {
+
+		logic.sortMail();
+	}
+	public void sortAge() {
+
+		logic.sortAge();
+	}
+
+	public void sortNationality() {
+
+		logic.sortNationality();
+	}
+
+	public void sortCellNumber() {
+
+		logic.sortCellNumber();
+	}
+
 }

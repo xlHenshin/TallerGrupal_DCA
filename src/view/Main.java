@@ -54,6 +54,7 @@ public class Main extends PApplet {
 			
 		case 1:
 			loginscreen.drawImage();
+			loginscreen.mostrarP5();
 			break;
 			
 		case 2:
@@ -136,6 +137,7 @@ public class Main extends PApplet {
 		case 3:
 			contactscreen.button();
 			schange=contactscreen.getChange();
+			contactscreen.sortList();
 			break;
 			
 		case 4:
@@ -154,7 +156,7 @@ public class Main extends PApplet {
 			newcontactscreen.button();
 			schange=newcontactscreen.getChange();
 			
-			newcontactscreen.getContactInfo();
+			//newcontactscreen.getContactInfo();
 			break;
 			
 		case 7:
