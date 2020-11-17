@@ -19,7 +19,7 @@ public class ShoppingScreen extends ScreenFather {
 	public void checkTicket() {
 		
 		if (tOne==true) {
-			
+			System.out.println("si paso");
 			ticketCase=1;
 		}
 		
@@ -90,5 +90,30 @@ public class ShoppingScreen extends ScreenFather {
 	public void setChange(int change) {
 		this.change = change;
 	}
+
+	public boolean istOne() {
+		return tOne;
+	}
+
+	public void settOne(boolean tOne) {
+		this.tOne = tOne;
+	}
+
+	public boolean istTwo() {
+		return tTwo;
+	}
+
+	public void settTwo(boolean tTwo) {
+		this.tTwo = tTwo;
+	}
+
+	public boolean istThree() {
+		return tThree;
+	}
+
+	public void settThree(boolean tThree) {
+		this.tThree = tThree;
+	}
+	
 	
 }
