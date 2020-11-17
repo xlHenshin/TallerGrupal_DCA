@@ -29,11 +29,9 @@ public class BuyScreen extends ScreenFather{
 		input [2] = "MM";
 		input [3] = "YY";
 		input [4] = "CVV";
-
-
+		
 		cp5.hide();
 		
-
 		for (int i = 0; i < input.length; i++) {
 			cp5.addTextfield(input[i]).setPosition((app.width / 2) - 118, 329 + (i * 47)).setSize(235, 35)
 			.setAutoClear(true).setColorBackground(color(255,255,255)).setColorLabel(color(0)).setColorActive(color(0)).setColorValueLabel(color(0));
@@ -52,33 +50,38 @@ public class BuyScreen extends ScreenFather{
 	}*/
 
 public void button() {
-
+		System.out.println("lloro");
 		if (app.mouseX > 647 && app.mouseX < 647 + 137
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	InitialScreen Button 
+			System.out.println("presionado IS BS");
 			change = 0;
 			cp5.hide();
 			error = false;
 		}
 		if (app.mouseX > 825 && app.mouseX < 825 + 65
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // 	Contacts Button
-			change = 3;
-			cp5.hide();
-			error = false;
+			System.out.println("presionado Con BS");
+			//change = 3;
+			//cp5.hide();
+			//error = false;
 		}
 		if (app.mouseX > 975 && app.mouseX < 975 + 45
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Login Button
-			change = 1;
-			cp5.hide();
-			error = false;
+			System.out.println("presionado log BS");
+			//change = 1;
+			//cp5.hide();
+			//error = false;
 		}
 		if (app.mouseX > 1096 && app.mouseX < 1096 + 82
 				&& app.mouseY > 40 && app.mouseY < 40 + 19) { // Register
-			change = 2;
-			cp5.hide();
-			error = false;
+			System.out.println("presionado reg BS");
+			//change = 2;
+			//cp5.hide();
+			//error = false;
 		}
 		if (app.mouseX > 719 && app.mouseX < 719 + 121
 				&& app.mouseY > 626 && app.mouseY < 626 + 28) {
+			System.out.println("presionado check BS");
 			cardholder = cp5.get(Textfield.class, "Cardholder Name").getText();
 			cardnumber = cp5.get(Textfield.class, "Card Number").getText();
 			mm = cp5.get(Textfield.class, "MM").getText();
@@ -108,6 +111,7 @@ public void button() {
 
 		if (app.mouseX > 600 && app.mouseX < 600 + 100
 				&& app.mouseY > 626 && app.mouseY < 626 + 28) {// 	cancel Button 
+			System.out.println("presionado cancel BS");
 			change = 0;
 			cp5.hide();
 			error = false;

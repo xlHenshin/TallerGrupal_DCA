@@ -9,6 +9,7 @@ public class LoginScreen extends ScreenFather{
 	public LoginScreen(float posY, PApplet app) {
 		super(posY, app);
 		screen = app.loadImage("../resources/login.png");
+		
 	}
 	
 	public void button() {
